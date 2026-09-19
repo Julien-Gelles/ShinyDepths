@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "minecraft:block/smithing_table_front",
+    "bottom": "minecraft:block/smithing_table_bottom",
+    "side": "minecraft:block/smithing_table_side",
+    "front": "minecraft:block/smithing_table_front",
+    "saw": "minecraft:block/stonecutter_saw"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "down":  { "uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down" },
+        "up":    { "uv": [0, 0, 16, 16], "texture": "#top", "cullface": "up" },
+        "north": { "uv": [0, 0, 16, 16], "texture": "#front", "cullface": "north" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#front", "cullface": "south" },
+        "west":  { "uv": [0, 0, 16, 16], "texture": "#side", "cullface": "west" },
+        "east":  { "uv": [0, 0, 16, 16], "texture": "#side", "cullface": "east" }
+      }
+    },
+    {
+      "from": [8, 16, 10.5],
+      "to": [14, 19, 10.5],
+      "faces": {
+        "north": { "uv": [1, 9, 15, 16], "texture": "#saw" },
+        "south": { "uv": [15, 9, 1, 16], "texture": "#saw" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "shiny-depths:block/netherite_lapidary_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "shiny-depths:block/netherite_lapidary_table"
+    },
+    "facing=south": {
+      "model": "shiny-depths:block/netherite_lapidary_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shiny-depths:block/netherite_lapidary_table",
+      "y": 270
+    }
+  }
+}

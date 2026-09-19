@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "shiny-depths:ruby_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "shiny-depths:ruby"
+  }
+}

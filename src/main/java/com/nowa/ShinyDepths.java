@@ -1,6 +1,8 @@
 package com.nowa;
 
 import com.nowa.block.ModBlocks;
+import com.nowa.block.entity.ModBlockEntities;
+import com.nowa.screen.ModScreenHandlers;
 import com.nowa.item.ModItemGroups;
 import com.nowa.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,5 +20,7 @@ public class ShinyDepths implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
 	}
 }

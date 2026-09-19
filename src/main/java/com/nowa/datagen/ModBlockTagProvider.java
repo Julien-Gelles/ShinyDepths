@@ -21,6 +21,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE);
 
+        // Tables de lapidaire : minables à la hache, comme la table de forgeron
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.IRON_LAPIDARY_TABLE)
+                .add(ModBlocks.DIAMOND_LAPIDARY_TABLE)
+                .add(ModBlocks.NETHERITE_LAPIDARY_TABLE);
+
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.RUBY_ORE)

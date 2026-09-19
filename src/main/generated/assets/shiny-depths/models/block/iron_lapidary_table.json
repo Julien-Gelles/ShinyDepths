@@ -1,0 +1,6 @@
+{
+  "parent": "shiny-depths:block/lapidary_table_base",
+  "textures": {
+    "top": "shiny-depths:block/iron_lapidary_table_top"
+  }
+}

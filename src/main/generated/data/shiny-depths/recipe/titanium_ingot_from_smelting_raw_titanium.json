@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.2,
+  "group": "titanium_ingot",
+  "ingredient": {
+    "item": "shiny-depths:raw_titanium"
+  },
+  "result": {
+    "id": "shiny-depths:titanium_ingot"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.2,
+  "group": "titanium_ingot",
+  "ingredient": {
+    "item": "shiny-depths:raw_titanium"
+  },
+  "result": {
+    "id": "shiny-depths:titanium_ingot"
+  }
+}
