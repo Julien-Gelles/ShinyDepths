@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shiny-depths:item/pyrite_nugget"
+  }
+}

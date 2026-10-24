@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shiny-depths:item/gold_ring",
+    "layer1": "shiny-depths:item/ring_stone"
+  }
+}

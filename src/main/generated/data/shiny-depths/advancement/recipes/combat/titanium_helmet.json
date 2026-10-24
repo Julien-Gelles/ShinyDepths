@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "shiny-depths:titanium_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_titanium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "shiny-depths:titanium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_titanium_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "shiny-depths:titanium_helmet"
+    ]
+  }
+}

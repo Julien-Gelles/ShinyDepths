@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "pyrite_ingot",
+  "key": {
+    "#": {
+      "item": "shiny-depths:pyrite_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "shiny-depths:pyrite_ingot"
+  }
+}

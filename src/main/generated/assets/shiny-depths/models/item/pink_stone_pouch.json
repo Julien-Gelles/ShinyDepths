@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "shiny-depths:item/pink_stone_pouch_gem",
+      "predicate": {
+        "shiny-depths:gem": 1
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "shiny-depths:item/pink_stone_pouch"
+  }
+}

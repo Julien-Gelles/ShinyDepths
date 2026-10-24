@@ -1,5 +1,7 @@
 package com.nowa.screen;
 
+import com.nowa.block.entity.LapidaryTableBlockEntity;
+import com.nowa.item.StonePouchItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -9,10 +11,16 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 
-/** Interface de la table : pierre brute à gauche, pierre polie à droite, inventaire du joueur en dessous. */
+/**
+ * Interface de la table (disposition du four) : pierre brute en haut à gauche, sachet vide en bas à gauche,
+ * sachet rempli à droite. Retirer le sachet donne l'XP stockée et révèle la pureté des pierres
+ * (Coup d'œil du joueur qui le retire).
+ */
 public class LapidaryTableScreenHandler extends ScreenHandler {
+    private static final int TABLE_SLOTS = 3;
     private final Inventory inventory;
     private final PropertyDelegate properties;
 
@@ -23,37 +31,63 @@ public class LapidaryTableScreenHandler extends ScreenHandler {
 
     public LapidaryTableScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate properties) {
         super(ModScreenHandlers.LAPIDARY_TABLE, syncId);
-        checkSize(inventory, 2);
+        checkSize(inventory, TABLE_SLOTS);
         checkDataCount(properties, 2);
         this.inventory = inventory;
         this.properties = properties;
         inventory.onOpen(playerInventory.player);
 
-        addSlot(new Slot(inventory, 0, 56, 35) {
-            @Override
-            public boolean canInsert(ItemStack stack) {
-                return inventory.isValid(0, stack);
-            }
-        });
-        addSlot(new Slot(inventory, 1, 116, 35) {
-            @Override
-            public boolean canInsert(ItemStack stack) {
-                return false;
-            }
-        });
+        addInputSlot(inventory, LapidaryTableBlockEntity.INPUT, 68, 25);
+        addInputSlot(inventory, LapidaryTableBlockEntity.POUCH, 68, 61);
+        addOutputSlot(inventory, LapidaryTableBlockEntity.OUTPUT, 135, 43);
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
-                addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
+                addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 100 + row * 18));
             }
         }
         for (int col = 0; col < 9; col++) {
-            addSlot(new Slot(playerInventory, col, 8 + col * 18, 142));
+            addSlot(new Slot(playerInventory, col, 8 + col * 18, 158));
         }
         addProperties(properties);
     }
 
+    private void addInputSlot(Inventory inventory, int index, int x, int y) {
+        addSlot(new Slot(inventory, index, x, y) {
+            @Override
+            public boolean canInsert(ItemStack stack) {
+                return inventory.isValid(index, stack);
+            }
+        });
+    }
+
+    private void addOutputSlot(Inventory inventory, int index, int x, int y) {
+        addSlot(new Slot(inventory, index, x, y) {
+            @Override
+            public boolean canInsert(ItemStack stack) {
+                return false;
+            }
+
+            // comme la sortie du four : retirer le sac donne l'XP stockée ; ses pierres reçoivent leur pureté
+            @Override
+            public void onTakeItem(PlayerEntity player, ItemStack stack) {
+                if (player instanceof ServerPlayerEntity serverPlayer) {
+                    StonePouchItem.appraise(stack, serverPlayer);
+                    if (inventory instanceof LapidaryTableBlockEntity table) {
+                        table.grantStoredXp(serverPlayer);
+                    }
+                }
+                super.onTakeItem(player, stack);
+            }
+        });
+    }
+
     private static Inventory inventoryAt(PlayerInventory playerInventory, BlockPos pos) {
-        return playerInventory.player.getWorld().getBlockEntity(pos) instanceof Inventory inventory ? inventory : new SimpleInventory(2);
+        return playerInventory.player.getWorld().getBlockEntity(pos) instanceof Inventory inventory ? inventory : new SimpleInventory(TABLE_SLOTS);
+    }
+
+    /** Le niveau de la table ouverte : il décide des pierres qu'elle sait tailler. */
+    public int getLevel() {
+        return inventory instanceof LapidaryTableBlockEntity table ? table.getLevel() : 1;
     }
 
     /** Longueur de la flèche de progression, de 0 à 24 pixels. */
@@ -76,12 +110,16 @@ public class LapidaryTableScreenHandler extends ScreenHandler {
         }
         ItemStack stack = slot.getStack();
         ItemStack original = stack.copy();
-        if (slotIndex < 2) {                                   // table -> inventaire du joueur
-            if (!insertItem(stack, 2, slots.size(), true)) {
+        if (slotIndex < TABLE_SLOTS) {                         // table -> inventaire du joueur
+            if (!insertItem(stack, TABLE_SLOTS, slots.size(), true)) {
                 return ItemStack.EMPTY;
             }
-        } else if (inventory.isValid(0, stack)) {             // inventaire -> emplacement de la pierre brute
-            if (!insertItem(stack, 0, 1, false)) {
+        } else if (inventory.isValid(LapidaryTableBlockEntity.INPUT, stack)) {   // inventaire -> pierre brute
+            if (!insertItem(stack, LapidaryTableBlockEntity.INPUT, LapidaryTableBlockEntity.INPUT + 1, false)) {
+                return ItemStack.EMPTY;
+            }
+        } else if (inventory.isValid(LapidaryTableBlockEntity.POUCH, stack)) {   // inventaire -> sachet vide
+            if (!insertItem(stack, LapidaryTableBlockEntity.POUCH, LapidaryTableBlockEntity.POUCH + 1, false)) {
                 return ItemStack.EMPTY;
             }
         } else {

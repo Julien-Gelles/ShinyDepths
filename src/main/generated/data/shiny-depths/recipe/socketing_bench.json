@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:gems"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "T": {
+      "item": "minecraft:smithing_table"
+    }
+  },
+  "pattern": [
+    "G G",
+    "ITI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "shiny-depths:socketing_bench"
+  }
+}

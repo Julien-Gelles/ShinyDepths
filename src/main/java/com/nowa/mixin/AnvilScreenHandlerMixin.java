@@ -46,7 +46,8 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
         ItemStack material = this.input.getStack(1);
         ItemStack result = this.output.getStack(0);
 
-        if (material.isOf(Items.FLINT) && !result.isEmpty() && this.repairItemUsage > 0) {
+        if (material.isOf(((PolisherItem) tool.getItem()).repairItem()) && !result.isEmpty()
+                && this.repairItemUsage > 0) {
             result.setDamage(0);
             this.repairItemUsage = 1;
             // coût vanilla d'une réparation avec un seul matériau : pénalité de travaux + 1 (+ 1 si renommage)

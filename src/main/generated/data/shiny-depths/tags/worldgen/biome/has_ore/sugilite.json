@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "minecraft:end_midlands",
+      "required": false
+    },
+    {
+      "id": "minecraft:end_barrens",
+      "required": false
+    }
+  ]
+}

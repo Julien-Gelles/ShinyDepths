@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pyrite_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "shiny-depths:pyrite_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "shiny-depths:pyrite_nugget_from_smelting_pyrite_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pyrite_hoe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "shiny-depths:pyrite_nugget_from_smelting_pyrite_hoe"
+    ]
+  }
+}

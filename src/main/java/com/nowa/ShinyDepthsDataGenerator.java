@@ -3,6 +3,9 @@ package com.nowa;
 import com.nowa.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
+import com.nowa.world.ModWorldGen;
 
 public class ShinyDepthsDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -14,5 +17,14 @@ public class ShinyDepthsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModBiomeTagProvider::new);
+		pack.addProvider(ModWorldGenProvider::new);
+	}
+
+	/** Les features de minerai vivent dans des registres dynamiques : il faut les construire pour le datagen. */
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModWorldGen::bootstrapConfigured);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModWorldGen::bootstrapPlaced);
 	}
 }

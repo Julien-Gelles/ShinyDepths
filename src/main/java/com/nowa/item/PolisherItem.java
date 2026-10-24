@@ -1,5 +1,8 @@
 package com.nowa.item;
 
+import com.nowa.lapidary.Lapidary;
+import com.nowa.lapidary.LapidaryBonuses;
+import com.nowa.lapidary.LapidaryLevels;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -7,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -18,23 +22,48 @@ import net.minecraft.world.World;
 
 /**
  * Polissoir : pierre brute dans l'autre main, clic droit maintenu comme le pinceau d'archéologie.
- * Le coût en durabilité dépend du niveau de la pierre : un polissoir neuf fait 16 pierres de niveau 1
- * ou 4 pierres de niveau 2.
+ *
+ * <p>Il polit <em>toutes</em> les pierres, du plus tendre au saphir : la dureté ne ferme rien, elle
+ * coûte. Un rubis demande huit fois la durabilité et cinq fois le temps d'un ambre, si bien qu'on
+ * finit par vouloir une table, sans qu'un refus muet ait jamais eu à l'expliquer.
+ *
+ * <p>Les versions en métal ne changent que la vivacité et la durabilité — et la pyrite, qui
+ * s'effrite au lieu de disparaître.
  */
 public class PolisherItem extends Item {
-    private static final int POLISH_TICKS = 40;
-    private static final int[] USES_PER_TIER = {0, 16, 4};   // index = niveau de la pierre
-    private final int level;
+    /** Durabilité dépensée selon la dureté de la pierre (index = dureté). */
+    private static int[] costs = {0, 4, 8, 16, 32};
+    /** Durée du polissage en ticks, avant division par la vivacité du polissoir. */
+    private static int[] ticks = {0, 40, 80, 120, 200};
 
-    public PolisherItem(int level, Settings settings) {
-        super(settings);
-        this.level = level;
+    static {
+        com.nowa.config.ModConfig.onApply(PolisherItem::applyConfig);
     }
 
-    /** Réparable à l'enclume avec du silex ; un silex suffit à le remettre à neuf (voir AnvilScreenHandlerMixin). */
+    private static void applyConfig() {
+        costs = com.nowa.config.ModConfig.ints("polisher.cost_by_hardness", new int[]{0, 4, 8, 16, 32});
+        ticks = com.nowa.config.ModConfig.ints("polisher.ticks_by_hardness", new int[]{0, 40, 80, 120, 200});
+    }
+
+    /** Ce qui le répare, et de combien il divise le temps de polissage. */
+    private final Item repairItem;
+    private final int speed;
+
+    public PolisherItem(Item repairItem, int speed, Settings settings) {
+        super(settings);
+        this.repairItem = repairItem;
+        this.speed = Math.max(1, speed);
+    }
+
+    /** Le matériau qui le remet à neuf : silex pour celui de pierre, son lingot pour les autres. */
+    public Item repairItem() {
+        return repairItem;
+    }
+
+    /** Réparable à l'enclume ; un seul matériau suffit à le remettre à neuf (voir AnvilScreenHandlerMixin). */
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(Items.FLINT);
+        return ingredient.isOf(repairItem);
     }
 
     @Override
@@ -44,20 +73,35 @@ public class PolisherItem extends Item {
 
     @Override
     public int getMaxUseTime(ItemStack stack, LivingEntity user) {
-        return POLISH_TICKS;
+        int ticks = polishTicks(user.getStackInHand(otherHand(user.getActiveHand())));
+        // le Polissage vif du lapidaire raccourcit le geste ; le client lit le même arbre, synchronisé
+        return user instanceof PlayerEntity player
+                ? Math.max(1, (int) Math.round(ticks * LapidaryBonuses.polishTime(player)))
+                : ticks;
+    }
+
+    /** Durée du polissage : celle de la dureté, divisée par la vivacité du polissoir. */
+    private int polishTicks(ItemStack gem) {
+        return Math.max(1, at(ticks, gem) / speed);
     }
 
     /** Durabilité consommée pour polir cette pierre. */
-    private int costFor(ItemStack tool, ItemStack gem) {
-        return tool.getMaxDamage() / USES_PER_TIER[GemPolishing.tierOf(gem)];
+    private int costFor(ItemStack gem) {
+        return at(costs, gem);
+    }
+
+    private static int at(int[] values, ItemStack gem) {
+        int tier = GemPolishing.tierOf(gem);
+        return tier > 0 && tier < values.length ? values[tier] : values[values.length - 1];
     }
 
     /**
-     * Seul le niveau de la pierre compte. Comme en vanilla (épée qui casse un bloc), on ne vérifie pas
-     * la durabilité restante : le polissage se fait toujours, et l'outil se brise s'il tombe à zéro ou moins.
+     * Toute pierre brute se polit à la main. Comme en vanilla (épée qui casse un bloc), on ne vérifie
+     * pas la durabilité restante : le polissage se fait toujours, et l'outil se brise s'il tombe à
+     * zéro ou moins.
      */
     private boolean canPolishNow(ItemStack tool, ItemStack gem) {
-        return GemPolishing.canPolish(gem, level);
+        return GemPolishing.tierOf(gem) > 0;
     }
 
     @Override
@@ -80,7 +124,7 @@ public class PolisherItem extends Item {
             user.stopUsingItem();
             return;
         }
-        if (remainingUseTicks % 8 == 0) {
+        if ((getMaxUseTime(stack, user) - remainingUseTicks) % 10 == 0) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.PLAYERS, 0.35f, 1.4f);
             Vec3d look = user.getRotationVec(1.0f);
@@ -100,14 +144,18 @@ public class PolisherItem extends Item {
         if (!canPolishNow(stack, gem)) {
             return stack;
         }
-        Item polished = GemPolishing.polishedFor(gem, level);
-        int cost = costFor(stack, gem);
+        Item polished = GemPolishing.polishedFor(gem);
+        int cost = LapidaryBonuses.polisherWear(player, costFor(gem));
+        int xp = LapidaryLevels.polishXp(GemPolishing.tierOf(gem));
         gem.decrement(1);
-        ItemStack result = new ItemStack(polished);
+        ItemStack result = GemPolishing.polishedStack(polished, Purity.roll(Lapidary.purityRank(player), world.random));
         if (!player.getInventory().insertStack(result)) {
             player.dropItem(result, false);
         }
         stack.damage(cost, player, LivingEntity.getSlotForHand(toolHand));
+        if (player instanceof ServerPlayerEntity serverPlayer) {
+            Lapidary.addXp(serverPlayer, xp);
+        }
         world.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.PLAYERS, 0.8f, 1.2f);
         return stack;

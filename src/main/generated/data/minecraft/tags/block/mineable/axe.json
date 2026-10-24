@@ -1,7 +1,8 @@
 {
   "values": [
-    "shiny-depths:iron_lapidary_table",
-    "shiny-depths:diamond_lapidary_table",
+    "shiny-depths:socketing_bench",
+    "shiny-depths:fusion_crucible",
+    "shiny-depths:gem_showcase",
     "shiny-depths:netherite_lapidary_table"
   ]
 }

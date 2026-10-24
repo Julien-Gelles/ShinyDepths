@@ -1,7 +1,33 @@
 {
   "values": [
     "shiny-depths:ruby_block",
+    "shiny-depths:moonstone_block",
+    "shiny-depths:onyx_block",
+    "shiny-depths:garnet_block",
+    "shiny-depths:amber_block",
+    "shiny-depths:peridot_block",
+    "shiny-depths:jade_block",
+    "shiny-depths:blue_topaz_block",
+    "shiny-depths:tanzanite_block",
+    "shiny-depths:rose_quartz_block",
+    "shiny-depths:sugilite_block",
+    "shiny-depths:tourmaline_block",
+    "shiny-depths:sapphire_block",
+    "shiny-depths:titanium_ore",
     "shiny-depths:ruby_ore",
-    "shiny-depths:deepslate_ruby_ore"
+    "shiny-depths:blue_topaz_ore",
+    "shiny-depths:tourmaline_ore",
+    "shiny-depths:moonstone_ore",
+    "shiny-depths:geode_ore",
+    "shiny-depths:calcite_geode_ore",
+    "shiny-depths:deepslate_titanium_ore",
+    "shiny-depths:deepslate_ruby_ore",
+    "shiny-depths:deepslate_blue_topaz_ore",
+    "shiny-depths:deepslate_tourmaline_ore",
+    "shiny-depths:deepslate_geode_ore",
+    "shiny-depths:peridot_ore",
+    "shiny-depths:cobalt_ore",
+    "shiny-depths:sugilite_ore",
+    "shiny-depths:ruby_block"
   ]
 }

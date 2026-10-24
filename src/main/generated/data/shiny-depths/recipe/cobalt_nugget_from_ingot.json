@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cobalt_nugget",
+  "ingredients": [
+    {
+      "item": "shiny-depths:cobalt_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "shiny-depths:cobalt_nugget"
+  }
+}

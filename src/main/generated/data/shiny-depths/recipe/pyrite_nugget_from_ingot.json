@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "pyrite_nugget",
+  "ingredients": [
+    {
+      "item": "shiny-depths:pyrite_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "shiny-depths:pyrite_nugget"
+  }
+}

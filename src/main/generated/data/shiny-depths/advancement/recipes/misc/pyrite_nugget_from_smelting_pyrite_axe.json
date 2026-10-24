@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pyrite_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "shiny-depths:pyrite_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "shiny-depths:pyrite_nugget_from_smelting_pyrite_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pyrite_axe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "shiny-depths:pyrite_nugget_from_smelting_pyrite_axe"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "shiny-depths:polisher"
+    }
+  },
+  "pattern": [
+    "III",
+    "#P#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "shiny-depths:netherite_lapidary_table"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "shiny-depths:polisher"
+    },
+    {
+      "item": "shiny-depths:cobalt_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "shiny-depths:cobalt_polisher"
+  }
+}

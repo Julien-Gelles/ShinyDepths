@@ -1,15 +1,45 @@
 {
-	"required": true,
-	"package": "com.nowa.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"AnvilScreenHandlerMixin",
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
-	}
+  "required": true,
+  "package": "com.nowa.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractBlockMixin",
+    "AnvilScreenHandlerMixin",
+    "BlockItemMixin",
+    "PistonBlockMixin",
+    "CrafterBlockMixin",
+    "CrafterScreenHandlerMixin",
+    "ScreenHandlerMixin",
+    "CraftingScreenHandlerMixin",
+    "FlintAndSteelItemMixin",
+    "ItemEntityMixin",
+    "SmithingScreenHandlerMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "VillagerEntityMixin",
+    "ProjectileEntityMixin",
+    "PersistentProjectileEntityMixin",
+    "PersistentProjectileAccessor",
+    "BlockMixin",
+    "FishingRodItemMixin",
+    "FishingBobberEntityMixin",
+    "PlayerScreenHandlerMixin",
+    "ServerPlayNetworkHandlerMixin"
+  ],
+  "client": [
+    "InventoryScreenMixin",
+    "MinecraftClientMixin",
+    "CreativeInventoryScreenMixin",
+    "CreativeSlotAccessor",
+    "SlotMixin",
+    "ItemRendererMixin",
+    "ImmediateAccessor",
+    "HeldItemRendererAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
 }

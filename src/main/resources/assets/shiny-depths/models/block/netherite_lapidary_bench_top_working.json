@@ -1,0 +1,7 @@
+{
+ "parent": "shiny-depths:block/lapidary_bench_top",
+ "textures": {
+  "metal": "minecraft:block/netherite_block",
+  "wheel": "shiny-depths:block/lapidary_wheel_spinning"
+ }
+}

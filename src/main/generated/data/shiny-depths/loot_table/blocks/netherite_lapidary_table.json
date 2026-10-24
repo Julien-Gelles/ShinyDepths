@@ -11,6 +11,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "shiny-depths:netherite_lapidary_table",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "part": "base"
+              }
+            }
+          ],
           "name": "shiny-depths:netherite_lapidary_table"
         }
       ],

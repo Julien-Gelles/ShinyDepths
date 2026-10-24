@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "shiny-depths:block/raw_cobalt_block"
+    }
+  }
+}

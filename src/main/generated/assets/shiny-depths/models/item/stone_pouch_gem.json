@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shiny-depths:item/stone_pouch",
+    "layer1": "shiny-depths:item/stone_pouch_gem"
+  }
+}

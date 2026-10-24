@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blast_furnace"
+    },
+    "C": {
+      "item": "minecraft:cauldron"
+    },
+    "G": {
+      "tag": "c:gems"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "IBI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "shiny-depths:fusion_crucible"
+  }
+}
