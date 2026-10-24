@@ -1,6 +1,0 @@
-{
- "parent": "shiny-depths:block/lapidary_bench_base_side",
- "textures": {
-  "metal": "minecraft:block/netherite_block"
- }
-}

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Pierres brutes polissables : pierre polie obtenue et niveau de dureté requis.

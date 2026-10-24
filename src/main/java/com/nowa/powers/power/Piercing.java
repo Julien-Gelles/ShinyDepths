@@ -41,7 +41,7 @@ public final class Piercing {
         }
         int pierced = (int) PIERCED.at(level);
         if (arrow.getPierceLevel() < pierced) {
-            ((PersistentProjectileAccessor) arrow).shinyDepths$setPierceLevel((byte) pierced);
+            ((PersistentProjectileAccessor) arrow).nowasDepths$setPierceLevel((byte) pierced);
         }
         ARROWS.put(arrow, KEPT.at(level));
     }

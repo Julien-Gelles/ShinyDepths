@@ -1,6 +1,6 @@
 package com.nowa.lapidary.client;
 
-import com.nowa.ShinyDepths;
+import com.nowa.NowasDepths;
 import com.nowa.item.Purity;
 import com.nowa.lapidary.Lapidary;
 import com.nowa.lapidary.LapidaryData;
@@ -55,7 +55,7 @@ public class LapidaryScreen extends Screen {
 
     /** Les métiers qui ont un arbre, dans l'ordre de leurs onglets. */
     private static final List<Tab> TABS = List.of(
-            new Tab(new ItemStack(com.nowa.item.ModItems.POLISHER), Text.translatable("lapidary.shiny-depths.screen.title")));
+            new Tab(new ItemStack(com.nowa.item.ModItems.POLISHER), Text.translatable("lapidary.nowas-depths.screen.title")));
 
     // couleurs du cadre de la fenêtre des progrès (textures/gui/advancements/window.png)
     private static final int BLACK = 0xFF000000;
@@ -106,7 +106,7 @@ public class LapidaryScreen extends Screen {
     private int selectedTab;
 
     public LapidaryScreen() {
-        super(Text.translatable("lapidary.shiny-depths.screen.title"));
+        super(Text.translatable("lapidary.nowas-depths.screen.title"));
     }
 
     @Override
@@ -289,14 +289,14 @@ public class LapidaryScreen extends Screen {
     private void drawHeader(DrawContext context, LapidaryData data) {
         int textY = top + 6;
         context.drawText(textRenderer, title, left + 8, textY, TEXT_COLOR, false);
-        Text points = Text.translatable("lapidary.shiny-depths.screen.points",
-                Lapidary.count("lapidary.shiny-depths.points", data.availablePoints()));
+        Text points = Text.translatable("lapidary.nowas-depths.screen.points",
+                Lapidary.count("lapidary.nowas-depths.points", data.availablePoints()));
         int pointsX = left + windowWidth - 8 - textRenderer.getWidth(points);
         context.drawText(textRenderer, points, pointsX, textY, TEXT_COLOR, false);
 
         int level = data.level();
         String levelText = String.valueOf(level);
-        Text progress = Text.translatable("lapidary.shiny-depths.screen.xp",
+        Text progress = Text.translatable("lapidary.nowas-depths.screen.xp",
                 LapidaryLevels.progressInLevel(data.xp()), LapidaryLevels.xpToNext(level));
         int levelWidth = textRenderer.getWidth(levelText);
         int progressWidth = textRenderer.getWidth(progress);
@@ -390,7 +390,7 @@ public class LapidaryScreen extends Screen {
     private static Identifier frame(Node node, String state) {
         String shape = node.cost() <= 1 ? "task" : node.cost() == 2 ? "goal" : "challenge";
         return state.equals("locked")
-                ? Identifier.of(ShinyDepths.MOD_ID, "lapidary/" + shape + "_frame_locked")
+                ? Identifier.of(NowasDepths.MOD_ID, "lapidary/" + shape + "_frame_locked")
                 : Identifier.ofVanilla("advancements/" + shape + "_frame_" + state);
     }
 
@@ -404,7 +404,7 @@ public class LapidaryScreen extends Screen {
         if (purityRank >= 0) {
             for (Purity purity : Purity.values()) {
                 if (purity.chance(purityRank) > 0) {
-                    lines.add(Text.translatable("lapidary.shiny-depths.screen.purity_line", purity.displayName(),
+                    lines.add(Text.translatable("lapidary.nowas-depths.screen.purity_line", purity.displayName(),
                             purity.chance(purityRank)).formatted(Formatting.GRAY));
                 }
             }
@@ -413,18 +413,18 @@ public class LapidaryScreen extends Screen {
             return lines;
         }
         if (unlocked) {
-            lines.add(Text.translatable("lapidary.shiny-depths.screen.unlocked").formatted(Formatting.GOLD));
+            lines.add(Text.translatable("lapidary.nowas-depths.screen.unlocked").formatted(Formatting.GOLD));
         } else if (!LapidarySkillTree.parentUnlocked(data, node)) {
             Node parent = LapidarySkillTree.get(node.parent());
-            lines.add(Text.translatable("lapidary.shiny-depths.screen.requires",
+            lines.add(Text.translatable("lapidary.nowas-depths.screen.requires",
                     Text.translatable(parent.translationKey())).formatted(Formatting.RED));
         } else if (data.availablePoints() < node.cost()) {
-            lines.add(Text.translatable("lapidary.shiny-depths.screen.not_enough_points",
-                    Lapidary.count("lapidary.shiny-depths.points", node.cost())).formatted(Formatting.RED));
+            lines.add(Text.translatable("lapidary.nowas-depths.screen.not_enough_points",
+                    Lapidary.count("lapidary.nowas-depths.points", node.cost())).formatted(Formatting.RED));
         } else {
-            Text price = node.cost() == 0 ? Text.translatable("lapidary.shiny-depths.screen.free")
-                    : Lapidary.count("lapidary.shiny-depths.points", node.cost());
-            lines.add(Text.translatable("lapidary.shiny-depths.screen.click_to_unlock", price)
+            Text price = node.cost() == 0 ? Text.translatable("lapidary.nowas-depths.screen.free")
+                    : Lapidary.count("lapidary.nowas-depths.points", node.cost());
+            lines.add(Text.translatable("lapidary.nowas-depths.screen.click_to_unlock", price)
                     .formatted(Formatting.GREEN));
         }
         return lines;

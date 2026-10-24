@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class PistonBlockMixin {
     @Inject(method = "move", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/block/piston/PistonHandler;getBrokenBlocks()Ljava/util/List;"))
-    private void shinyDepths$carryGemBlockPurity(World world, BlockPos pos, Direction dir, boolean retract,
+    private void nowasDepths$carryGemBlockPurity(World world, BlockPos pos, Direction dir, boolean retract,
                                                  CallbackInfoReturnable<Boolean> info, @Local PistonHandler handler) {
         // le sens du mouvement, tel que le piston le calcule lui-même quelques lignes plus bas
         GemBlockPurity.shift(world, handler.getMovedBlocks(), retract ? dir : dir.getOpposite());

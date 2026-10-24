@@ -1,15 +1,15 @@
 {
   "values": [
-    "shiny-depths:pyrite_ore",
-    "shiny-depths:titanium_ore",
-    "shiny-depths:platinum_ore",
-    "shiny-depths:ruby_ore",
-    "shiny-depths:garnet_ore",
-    "shiny-depths:amber_ore",
-    "shiny-depths:jade_ore",
-    "shiny-depths:blue_topaz_ore",
-    "shiny-depths:tourmaline_ore",
-    "shiny-depths:moonstone_ore",
-    "shiny-depths:geode_ore"
+    "nowas-depths:pyrite_ore",
+    "nowas-depths:titanium_ore",
+    "nowas-depths:platinum_ore",
+    "nowas-depths:ruby_ore",
+    "nowas-depths:garnet_ore",
+    "nowas-depths:amber_ore",
+    "nowas-depths:jade_ore",
+    "nowas-depths:blue_topaz_ore",
+    "nowas-depths:tourmaline_ore",
+    "nowas-depths:moonstone_ore",
+    "nowas-depths:geode_ore"
   ]
 }

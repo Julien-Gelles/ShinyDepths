@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    }
+  },
+  "pattern": [
+    "SG",
+    "GS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nowas-depths:dynamite"
+  }
+}

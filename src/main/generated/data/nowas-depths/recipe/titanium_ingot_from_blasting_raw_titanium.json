@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.2,
+  "group": "titanium_ingot",
+  "ingredient": {
+    "item": "nowas-depths:raw_titanium"
+  },
+  "result": {
+    "id": "nowas-depths:titanium_ingot"
+  }
+}

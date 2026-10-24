@@ -26,7 +26,7 @@ import java.util.List;
 @Mixin(AbstractBlock.class)
 public class AbstractBlockMixin {
     @Inject(method = "getDroppedStacks", at = @At("RETURN"))
-    private void shinyDepths$dropGemBlockPurity(BlockState state, LootContextParameterSet.Builder builder,
+    private void nowasDepths$dropGemBlockPurity(BlockState state, LootContextParameterSet.Builder builder,
                                                 CallbackInfoReturnable<List<ItemStack>> info) {
         if (!GemBlockPurity.isGemBlock(state)) {
             return;

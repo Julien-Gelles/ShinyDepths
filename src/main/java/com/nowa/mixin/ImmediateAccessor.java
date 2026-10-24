@@ -16,5 +16,5 @@ import java.util.SequencedMap;
 @Mixin(VertexConsumerProvider.Immediate.class)
 public interface ImmediateAccessor {
     @Accessor("layerBuffers")
-    SequencedMap<RenderLayer, BufferAllocator> shinyDepths$layerBuffers();
+    SequencedMap<RenderLayer, BufferAllocator> nowasDepths$layerBuffers();
 }

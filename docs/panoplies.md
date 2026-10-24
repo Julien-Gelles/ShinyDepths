@@ -1,4 +1,4 @@
-# Panoplies — Shiny Depths
+# Panoplies — Nowa's Depths
 
 Les quatre métaux du mod se forgent en **outils** : épée, pioche, hache, pelle, houe. Trois d'entre
 eux — cobalt, titane, platine — se forgent aussi en **armure**, les quatre pièces. La pyrite n'en a

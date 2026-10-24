@@ -33,20 +33,20 @@ public abstract class CreativeInventoryScreenMixin
     }
 
     @Inject(method = "setSelectedTab", at = @At("TAIL"))
-    private void shinyDepths$placeJewelry(ItemGroup group, CallbackInfo info) {
+    private void nowasDepths$placeJewelry(ItemGroup group, CallbackInfo info) {
         if (!((CreativeInventoryScreen) (Object) this).isInventoryTabSelected()) {
             return;
         }
         for (Slot slot : this.handler.slots) {
-            if (slot instanceof CreativeSlotAccessor copy && copy.shinyDepths$slot() instanceof JewelrySlot jewel) {
-                ((MovableSlot) slot).shinyDepths$moveTo(
+            if (slot instanceof CreativeSlotAccessor copy && copy.nowasDepths$slot() instanceof JewelrySlot jewel) {
+                ((MovableSlot) slot).nowasDepths$moveTo(
                         JewelryPanel.creativeX(jewel.place()), JewelryPanel.creativeY(jewel.place()));
             }
         }
     }
 
     @Inject(method = "drawBackground", at = @At("TAIL"))
-    private void shinyDepths$jewelryFrames(DrawContext context, float delta, int mouseX, int mouseY,
+    private void nowasDepths$jewelryFrames(DrawContext context, float delta, int mouseX, int mouseY,
                                            CallbackInfo info) {
         if (!((CreativeInventoryScreen) (Object) this).isInventoryTabSelected()) {
             return;

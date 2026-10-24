@@ -19,8 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * La pureté des blocs de pierres polies posés dans le monde : ceux du mod, et les blocs de diamant

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "pyrite_nugget",
+  "ingredient": {
+    "item": "nowas-depths:pyrite_axe"
+  },
+  "result": {
+    "id": "nowas-depths:pyrite_nugget"
+  }
+}

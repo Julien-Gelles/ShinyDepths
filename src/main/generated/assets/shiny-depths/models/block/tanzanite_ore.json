@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "shiny-depths:block/tanzanite_ore"
-  }
-}

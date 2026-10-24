@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les trois armures du mod : cobalt, titane, platine. La pyrite n'en a pas. La protection se lit dans l'ordre bottes, jambières, plastron, casque,

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "nowas-depths:block/cobalt_lantern"
+    },
+    "hanging=true": {
+      "model": "nowas-depths:block/cobalt_lantern_hanging"
+    }
+  }
+}

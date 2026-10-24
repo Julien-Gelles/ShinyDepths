@@ -1,4 +1,4 @@
-# Sertissage — Shiny Depths
+# Sertissage — Nowa's Depths
 
 Ce que deviennent les pierres polies : on en sertit une sur une **bague**, dont elle fait le pouvoir
 (voir [bijoux.md](bijoux.md)), ou une sur la **lampe frontale**, dont elle fait luire le

@@ -1,20 +1,20 @@
 {
   "values": [
-    "shiny-depths:pyrite_pickaxe",
-    "shiny-depths:pyrite_axe",
-    "shiny-depths:pyrite_shovel",
-    "shiny-depths:pyrite_hoe",
-    "shiny-depths:cobalt_pickaxe",
-    "shiny-depths:cobalt_axe",
-    "shiny-depths:cobalt_shovel",
-    "shiny-depths:cobalt_hoe",
-    "shiny-depths:titanium_pickaxe",
-    "shiny-depths:titanium_axe",
-    "shiny-depths:titanium_shovel",
-    "shiny-depths:titanium_hoe",
-    "shiny-depths:platinum_pickaxe",
-    "shiny-depths:platinum_axe",
-    "shiny-depths:platinum_shovel",
-    "shiny-depths:platinum_hoe"
+    "nowas-depths:pyrite_pickaxe",
+    "nowas-depths:pyrite_axe",
+    "nowas-depths:pyrite_shovel",
+    "nowas-depths:pyrite_hoe",
+    "nowas-depths:cobalt_pickaxe",
+    "nowas-depths:cobalt_axe",
+    "nowas-depths:cobalt_shovel",
+    "nowas-depths:cobalt_hoe",
+    "nowas-depths:titanium_pickaxe",
+    "nowas-depths:titanium_axe",
+    "nowas-depths:titanium_shovel",
+    "nowas-depths:titanium_hoe",
+    "nowas-depths:platinum_pickaxe",
+    "nowas-depths:platinum_axe",
+    "nowas-depths:platinum_shovel",
+    "nowas-depths:platinum_hoe"
   ]
 }

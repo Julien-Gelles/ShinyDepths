@@ -17,8 +17,8 @@ import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import org.jetbrains.annotations.Nullable;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Le carrefour des pouvoirs : les greffons et les événements du jeu arrivent tous ici, et d'ici

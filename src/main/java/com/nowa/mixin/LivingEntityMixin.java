@@ -25,12 +25,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class LivingEntityMixin {
     /** Les dégâts qu'une entité va recevoir passent par le pouvoir de celui qui frappe. */
     @ModifyVariable(method = "damage", at = @At("HEAD"), argsOnly = true)
-    private float shinyDepths$powerDamage(float amount, @Local(argsOnly = true) DamageSource source) {
+    private float nowasDepths$powerDamage(float amount, @Local(argsOnly = true) DamageSource source) {
         return PowerHooks.damage((LivingEntity) (Object) this, source, amount);
     }
 
     @Inject(method = "sendEquipmentBreakStatus", at = @At("HEAD"))
-    private void shinyDepths$salvageBrokenGear(Item item, EquipmentSlot slot, CallbackInfo info) {
+    private void nowasDepths$salvageBrokenGear(Item item, EquipmentSlot slot, CallbackInfo info) {
         GearSalvage.onBroken((LivingEntity) (Object) this, item);
     }
 }

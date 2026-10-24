@@ -1,0 +1,64 @@
+{
+ "variants": {
+  "facing=north,part=base": {
+   "model": "nowas-depths:block/fusion_crucible_base"
+  },
+  "facing=north,part=base_side": {
+   "model": "nowas-depths:block/fusion_crucible_base_side"
+  },
+  "facing=north,part=top": {
+   "model": "nowas-depths:block/fusion_crucible_top"
+  },
+  "facing=north,part=top_side": {
+   "model": "nowas-depths:block/fusion_crucible_top_side"
+  },
+  "facing=east,part=base": {
+   "model": "nowas-depths:block/fusion_crucible_base",
+   "y": 90
+  },
+  "facing=east,part=base_side": {
+   "model": "nowas-depths:block/fusion_crucible_base_side",
+   "y": 90
+  },
+  "facing=east,part=top": {
+   "model": "nowas-depths:block/fusion_crucible_top",
+   "y": 90
+  },
+  "facing=east,part=top_side": {
+   "model": "nowas-depths:block/fusion_crucible_top_side",
+   "y": 90
+  },
+  "facing=south,part=base": {
+   "model": "nowas-depths:block/fusion_crucible_base",
+   "y": 180
+  },
+  "facing=south,part=base_side": {
+   "model": "nowas-depths:block/fusion_crucible_base_side",
+   "y": 180
+  },
+  "facing=south,part=top": {
+   "model": "nowas-depths:block/fusion_crucible_top",
+   "y": 180
+  },
+  "facing=south,part=top_side": {
+   "model": "nowas-depths:block/fusion_crucible_top_side",
+   "y": 180
+  },
+  "facing=west,part=base": {
+   "model": "nowas-depths:block/fusion_crucible_base",
+   "y": 270
+  },
+  "facing=west,part=base_side": {
+   "model": "nowas-depths:block/fusion_crucible_base_side",
+   "y": 270
+  },
+  "facing=west,part=top": {
+   "model": "nowas-depths:block/fusion_crucible_top",
+   "y": 270
+  },
+  "facing=west,part=top_side": {
+   "model": "nowas-depths:block/fusion_crucible_top_side",
+   "y": 270
+  }
+ }
+}

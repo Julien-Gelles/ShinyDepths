@@ -7,7 +7,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * L'écran du creuset de fusion, en peigne. Le fond reprend celui du four du jeu, plus haut : les

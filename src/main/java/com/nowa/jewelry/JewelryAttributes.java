@@ -7,7 +7,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Ce que les bijoux portés valent au joueur par leur seul métal : un peu d'armure, sertis ou non.

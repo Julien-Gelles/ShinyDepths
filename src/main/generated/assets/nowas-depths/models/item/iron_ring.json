@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "nowas-depths:item/iron_ring_gem",
+      "predicate": {
+        "nowas-depths:gem": 1
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "nowas-depths:item/iron_ring"
+  }
+}

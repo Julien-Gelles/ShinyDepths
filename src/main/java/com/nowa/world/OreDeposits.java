@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * La table de génération des minerais, telle que décrite dans docs/minerais.md.

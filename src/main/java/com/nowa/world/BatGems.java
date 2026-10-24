@@ -11,8 +11,8 @@ import net.minecraft.world.GameRules;
 
 import java.util.List;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les chauves-souris vivent au fond des grottes, et il leur arrive d'y avoir ramassé quelque chose :

@@ -6,7 +6,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Écran de la vitrine à pierres. Son titre dit à qui elle est quand ce n'est pas à soi — à un autre
@@ -31,11 +31,11 @@ public class GemShowcaseScreen extends HandledScreen<GemShowcaseScreenHandler> {
     /** « Vitrine du lapidaire » devant l'étal d'un villageois, « Vitrine de Nowa » devant celle d'un autre. */
     private static Text readOnlyTitle(GemShowcaseScreenHandler handler, Text title) {
         if (handler.tended()) {
-            return Text.translatable("container.shiny-depths.gem_showcase.villager");
+            return Text.translatable("container.nowas-depths.gem_showcase.villager");
         }
         return handler.editable() || handler.ownerName().isEmpty()
                 ? title
-                : Text.translatable("container.shiny-depths.gem_showcase.owned", handler.ownerName());
+                : Text.translatable("container.nowas-depths.gem_showcase.owned", handler.ownerName());
     }
 
     @Override

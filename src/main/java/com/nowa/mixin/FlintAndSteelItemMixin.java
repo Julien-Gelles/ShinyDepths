@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(FlintAndSteelItem.class)
 public class FlintAndSteelItemMixin {
     @Inject(method = "useOnBlock", at = @At("HEAD"), cancellable = true)
-    private void shinyDepths$lightDynamite(ItemUsageContext context, CallbackInfoReturnable<ActionResult> info) {
+    private void nowasDepths$lightDynamite(ItemUsageContext context, CallbackInfoReturnable<ActionResult> info) {
         PlayerEntity player = context.getPlayer();
         if (player == null) {
             return;

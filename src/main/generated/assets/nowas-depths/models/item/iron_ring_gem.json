@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nowas-depths:item/iron_ring",
+    "layer1": "nowas-depths:item/ring_stone"
+  }
+}

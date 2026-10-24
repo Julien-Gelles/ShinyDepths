@@ -33,23 +33,23 @@ import java.util.Optional;
 @Mixin(CrafterBlock.class)
 public class CrafterBlockMixin {
     @Inject(method = "onPlaced", at = @At("TAIL"))
-    private void shinyDepths$rememberOwner(World world, BlockPos pos, BlockState state, LivingEntity placer,
+    private void nowasDepths$rememberOwner(World world, BlockPos pos, BlockState state, LivingEntity placer,
                                            ItemStack stack, CallbackInfo info) {
         LapidaryCrafting.remember(world, pos, placer);
     }
 
     @Inject(method = "craft", at = @At("HEAD"))
-    private void shinyDepths$beginCraft(BlockState state, ServerWorld world, BlockPos pos, CallbackInfo info) {
+    private void nowasDepths$beginCraft(BlockState state, ServerWorld world, BlockPos pos, CallbackInfo info) {
         LapidaryCrafting.enterCrafter(pos);
     }
 
     @Inject(method = "craft", at = @At("RETURN"))
-    private void shinyDepths$endCraft(BlockState state, ServerWorld world, BlockPos pos, CallbackInfo info) {
+    private void nowasDepths$endCraft(BlockState state, ServerWorld world, BlockPos pos, CallbackInfo info) {
         LapidaryCrafting.leaveCrafter();
     }
 
     @Inject(method = "getCraftingRecipe", at = @At("RETURN"), cancellable = true)
-    private static void shinyDepths$someoneKnowsTheTrade(World world, CraftingRecipeInput input,
+    private static void nowasDepths$someoneKnowsTheTrade(World world, CraftingRecipeInput input,
                                                          CallbackInfoReturnable<Optional<RecipeEntry<CraftingRecipe>>> info) {
         BlockPos pos = LapidaryCrafting.currentCrafter();
         Optional<RecipeEntry<CraftingRecipe>> found = info.getReturnValue();

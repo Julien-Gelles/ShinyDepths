@@ -14,8 +14,8 @@ import net.minecraft.world.GameRules;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les bijoux portés : là où ils vivent, et ce qu'il advient d'eux à la mort.

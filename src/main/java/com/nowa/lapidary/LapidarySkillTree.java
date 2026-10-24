@@ -116,7 +116,7 @@ public final class LapidarySkillTree {
         }
 
         public String translationKey() {
-            return "lapidary.shiny-depths.node." + id;
+            return "lapidary.nowas-depths.node." + id;
         }
     }
 

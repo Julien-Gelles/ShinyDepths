@@ -1,4 +1,4 @@
-# Minerais — Shiny Depths
+# Minerais — Nowa's Depths
 
 Liste de tous les matériaux du mod : ceux de Minecraft qu'on garde tels quels, le Rubis déjà présent, et les nouveaux à créer.
 
@@ -80,7 +80,7 @@ Les tags sont remplis avec les tags conventionnels `c:` quand ils existent, jama
 
 *Implémenté* : la table vit dans `com.nowa.world.OreDeposits`, les deux bootstraps dans `ModWorldGen`, les tags de biomes dans `ModBiomeTags`. Le datagen écrit 18 features configurées, 32 features placées et 15 tags de biomes.
 
-Pour contrôler tout ça en jeu : `/locate ore <minerai ou #tag> [rayon]` (op), greffé sur le `/locate` vanilla. Il ne connaît que les blocs de `#c:ores`, ceux du mod comme ceux du jeu, et accepte les deux tags — `#shiny-depths:ores` pour les nôtres, `#c:ores` pour tous. Il ne cherche que dans les chunks chargés, puisqu'un minerai n'existe pas avant que son chunk soit généré, et il indique combien de blocs il a vus et dans combien de chunks : de quoi vérifier une densité sans creuser.
+Pour contrôler tout ça en jeu : `/locate ore <minerai ou #tag> [rayon]` (op), greffé sur le `/locate` vanilla. Il ne connaît que les blocs de `#c:ores`, ceux du mod comme ceux du jeu, et accepte les deux tags — `#nowas-depths:ores` pour les nôtres, `#c:ores` pour tous. Il ne cherche que dans les chunks chargés, puisqu'un minerai n'existe pas avant que son chunk soit généré, et il indique combien de blocs il a vus et dans combien de chunks : de quoi vérifier une densité sans creuser.
 
 ### Lecture des tableaux
 
@@ -102,7 +102,7 @@ Pour contrôler tout ça en jeu : `/locate ore <minerai ou #tag> [rayon]` (op), 
 | Ambre | pierre | 32 → 128 (trapèze) | 7 | 50 % | 25 % des chunks | 5 | `#c:is_taiga`, `#c:is_old_growth` |
 | Jade | pierre | 0 → 96 (uniforme) | 6 | 30 % | 25 % des chunks | 5 | `#c:is_jungle` |
 | Topaze bleue | pierre, deepslate | -48 → 32 (uniforme) | 4 | 60 % | 12 % des chunks | 3 | `#c:is_ocean` |
-| Tourmaline | pierre, deepslate | -48 → 32 (uniforme) | 4 | 50 % | 10 % des chunks | 4 | `shiny-depths:has_ore/tourmaline` (`lush_caves`) |
+| Tourmaline | pierre, deepslate | -48 → 32 (uniforme) | 4 | 50 % | 10 % des chunks | 4 | `nowas-depths:has_ore/tourmaline` (`lush_caves`) |
 | Pierre de lune | pierre | 64 → 256 (trapèze) | 5 | 0 % | 8 % des chunks | 4 | `#c:is_snowy` + `#c:is_mountain/peak` |
 
 ### Nether
@@ -111,8 +111,8 @@ Roche hôte : netherrack. Plage commune 10 → 117, uniforme, comme le quartz et
 
 | Matériau | Taille | Air | Hors biome | Biome favori | Tag du bonus |
 |---|---|---|---|---|---|
-| Péridot | 6 | 0 % | 4 | 10 | `shiny-depths:has_ore/peridot` (`basalt_deltas`) |
-| Cobalt | 5 | 20 % | 3 | 8 | `shiny-depths:has_ore/cobalt` (`soul_sand_valley`) |
+| Péridot | 6 | 0 % | 4 | 10 | `nowas-depths:has_ore/peridot` (`basalt_deltas`) |
+| Cobalt | 5 | 20 % | 3 | 8 | `nowas-depths:has_ore/cobalt` (`soul_sand_valley`) |
 | Quartz rose | 7 | 0 % | 33 % des chunks | 8 | `#c:is_nether_forest` (`crimson_forest`) |
 
 ### End
@@ -122,8 +122,8 @@ Roche hôte : end stone. **Rien sur l'île centrale** : la génération ne vise 
 | Matériau | Y (forme) | Taille | Air | Îles extérieures | Biome favori | Tag du bonus |
 |---|---|---|---|---|---|---|
 | Onyx | 0 → 80 (uniforme) | 6 | 0 % | 3 | — | aucun |
-| Sugilite | 0 → 80 (uniforme) | 4 | 40 % | 50 % des chunks | 2 | `shiny-depths:has_ore/sugilite` (`end_midlands`, `end_barrens`) |
-| Tanzanite | 20 → 80 (trapèze) | 3 | 100 % | — | 17 % des chunks | `shiny-depths:has_ore/tanzanite` (`end_highlands`) |
+| Sugilite | 0 → 80 (uniforme) | 4 | 40 % | 50 % des chunks | 2 | `nowas-depths:has_ore/sugilite` (`end_midlands`, `end_barrens`) |
+| Tanzanite | 20 → 80 (trapèze) | 3 | 100 % | — | 17 % des chunks | `nowas-depths:has_ore/tanzanite` (`end_highlands`) |
 
 ### Budget de densité
 
@@ -131,7 +131,7 @@ Hors biome favori, le mod ajoute environ **8 veines par chunk** dans l'Overworld
 
 ### Tags de biomes à créer
 
-Tous sous `shiny-depths:has_ore/<matériau>`. Ceux qui existent en conventionnel sont remplis par référence, les autres par identifiant vanilla en `required: false` pour rester valides si un jour le biome disparaît :
+Tous sous `nowas-depths:has_ore/<matériau>`. Ceux qui existent en conventionnel sont remplis par référence, les autres par identifiant vanilla en `required: false` pour rester valides si un jour le biome disparaît :
 
 | Tag | Contenu |
 |---|---|
@@ -342,7 +342,7 @@ D'ici leur estimation, une pierre sans pureté **ne peut pas être sertie**. Ils
 à toutes les recettes du jeu, comme avant.
 
 Seule une pierre qui sort de la taille est estimée par le sachet : elle porte une marque
-(`shiny-depths:unappraised`) jusque-là. Glisser un diamant de coffre dans un sachet ne lui donne
+(`nowas-depths:unappraised`) jusque-là. Glisser un diamant de coffre dans un sachet ne lui donne
 donc rien : c'est le travail de la **loupe**.
 
 ### La loupe de lapidaire

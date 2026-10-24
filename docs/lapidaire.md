@@ -1,4 +1,4 @@
-# Lapidaire — Shiny Depths
+# Lapidaire — Nowa's Depths
 
 Le métier du mod : on polit des pierres, on gagne de l'expérience de lapidaire, et chaque niveau
 donne un point à dépenser dans l'arbre de compétences (touche par défaut, écran dédié).
@@ -187,8 +187,8 @@ suivent toujours la configuration.
 
 Depuis le 2026-10-22 (sa demande), le mod a **deux onglets** au lieu d'un (`ModItemGroups`) :
 
-- **Shiny Depths : Lapidaire**, le polissoir pour emblème : polissoirs, loupe, sachets, table,
+- **Nowa's Depths : Lapidaire**, le polissoir pour emblème : polissoirs, loupe, sachets, table,
   établi, creuset, vitrine, pierres brutes et géode, pierres polies, blocs de pierres, bagues ;
-- **Shiny Depths : Mineur**, la lampe frontale pour emblème — ce qui touche au futur métier de
+- **Nowa's Depths : Mineur**, la lampe frontale pour emblème — ce qui touche au futur métier de
   mineur : lampe, dynamite, lanterne et chaîne de cobalt, métaux bruts, lingots, pépites et leurs
   blocs, minerais dans la roche (pierres et géodes comprises), panoplies.

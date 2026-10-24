@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(VillagerEntity.class)
 public class VillagerEntityMixin {
     @Inject(method = "prepareOffersFor", at = @At("TAIL"))
-    private void shinyDepths$merchantDiscount(PlayerEntity player, CallbackInfo info) {
+    private void nowasDepths$merchantDiscount(PlayerEntity player, CallbackInfo info) {
         VillagerEntity villager = (VillagerEntity) (Object) this;
         Merchant.discount(player, villager.getOffers());
         if (villager.getVillagerData().getProfession() == LapidaryVillager.PROFESSION) {

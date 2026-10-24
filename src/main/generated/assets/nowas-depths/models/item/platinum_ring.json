@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "nowas-depths:item/platinum_ring_gem",
+      "predicate": {
+        "nowas-depths:gem": 1
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "nowas-depths:item/platinum_ring"
+  }
+}

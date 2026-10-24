@@ -13,8 +13,8 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TextCodecs;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les messages du mod : de courtes explications affichées en haut à droite, comme un progrès obtenu.

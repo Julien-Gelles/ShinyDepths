@@ -25,7 +25,7 @@ public abstract class ServerPlayNetworkHandlerMixin {
 
     // En fin de méthode : le jeu a déjà ramené le paquet sur le fil principal et vérifié le mode.
     @Inject(method = "onCreativeInventoryAction", at = @At("TAIL"))
-    private void shinyDepths$creativeJewelry(CreativeInventoryActionC2SPacket packet, CallbackInfo info) {
+    private void nowasDepths$creativeJewelry(CreativeInventoryActionC2SPacket packet, CallbackInfo info) {
         if (!player.interactionManager.isCreative()) {
             return;
         }

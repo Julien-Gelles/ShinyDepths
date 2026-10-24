@@ -23,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
     @Inject(method = "doItemUse", at = @At("TAIL"))
-    private void shinyDepths$idleUse(CallbackInfo info) {
+    private void nowasDepths$idleUse(CallbackInfo info) {
         PowersClient.idleUse((MinecraftClient) (Object) this);
     }
 
@@ -35,7 +35,7 @@ public class MinecraftClientMixin {
      */
     @WrapOperation(method = "doItemUse", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/client/render/item/HeldItemRenderer;resetEquipProgress(Lnet/minecraft/util/Hand;)V"))
-    private void shinyDepths$smoothLoupe(HeldItemRenderer renderer, Hand hand, Operation<Void> original) {
+    private void nowasDepths$smoothLoupe(HeldItemRenderer renderer, Hand hand, Operation<Void> original) {
         MinecraftClient client = (MinecraftClient) (Object) this;
         ItemStack held = client.player == null ? ItemStack.EMPTY : client.player.getStackInHand(hand);
         if (held.getItem() instanceof LoupeItem) {
@@ -46,9 +46,9 @@ public class MinecraftClientMixin {
                 shown.set(DataComponentTypes.REPAIR_COST, held.getOrDefault(DataComponentTypes.REPAIR_COST, 0) + 1);
                 HeldItemRendererAccessor accessor = (HeldItemRendererAccessor) renderer;
                 if (hand == Hand.MAIN_HAND) {
-                    accessor.shinyDepths$setMainHand(shown);
+                    accessor.nowasDepths$setMainHand(shown);
                 } else {
-                    accessor.shinyDepths$setOffHand(shown);
+                    accessor.nowasDepths$setOffHand(shown);
                 }
             }
             return;

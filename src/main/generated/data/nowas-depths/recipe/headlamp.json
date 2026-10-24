@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "fabric:type": "nowas-depths:min_purity",
+      "min_purity": "clear"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "LBL",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nowas-depths:headlamp"
+  }
+}

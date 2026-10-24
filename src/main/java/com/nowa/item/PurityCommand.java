@@ -13,7 +13,7 @@ import net.minecraft.util.Formatting;
 import java.util.Arrays;
 
 /**
- * {@code /shinydepths purity <classe>} : donne cette pureté à la pile de pierres polies tenue en
+ * {@code /nowasdepths purity <classe>} : donne cette pureté à la pile de pierres polies tenue en
  * main. Un outil d'essai, réservé aux opérateurs — une pierre prise dans l'onglet créatif n'a pas de
  * pureté, et sans pureté elle ne se sertit pas.
  */
@@ -22,7 +22,7 @@ public final class PurityCommand {
     }
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        dispatcher.register(CommandManager.literal("shinydepths")
+        dispatcher.register(CommandManager.literal("nowasdepths")
                 .then(CommandManager.literal("purity")
                         .requires(source -> source.hasPermissionLevel(2))
                         .then(CommandManager.argument("class", StringArgumentType.word())
@@ -38,13 +38,13 @@ public final class PurityCommand {
                 .findFirst().orElse(null);
         ItemStack held = player == null ? ItemStack.EMPTY : player.getMainHandStack();
         if (purity == null || !GemPolishing.isPolished(held.getItem())) {
-            source.sendError(Text.translatable("command.shiny-depths.purity.not_a_gem"));
+            source.sendError(Text.translatable("command.nowas-depths.purity.not_a_gem"));
             return 0;
         }
         held.set(ModDataComponents.PURITY, purity);
         held.remove(ModDataComponents.UNAPPRAISED);
         GemPolishing.applyGlint(held);
-        source.sendFeedback(() -> Text.translatable("command.shiny-depths.purity.set", purity.displayName())
+        source.sendFeedback(() -> Text.translatable("command.nowas-depths.purity.set", purity.displayName())
                 .formatted(Formatting.GREEN), false);
         return 1;
     }

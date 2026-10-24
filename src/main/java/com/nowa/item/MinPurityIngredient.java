@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Un ingrédient de recette : n'importe quelle pierre polie — du mod, ou le diamant et l'émeraude
@@ -21,7 +21,7 @@ import static com.nowa.ShinyDepths.MOD_ID;
  * pureté ; celle-ci reste une recette ordinaire, visible au livre de recettes, qui y fait défiler
  * les pierres acceptées.
  *
- * <p>Dans un fichier de recette : {@code {"fabric:type": "shiny-depths:min_purity", "min_purity": "clear"}}.
+ * <p>Dans un fichier de recette : {@code {"fabric:type": "nowas-depths:min_purity", "min_purity": "clear"}}.
  */
 public record MinPurityIngredient(Purity min) implements CustomIngredient {
     public static final Serializer SERIALIZER = new Serializer();

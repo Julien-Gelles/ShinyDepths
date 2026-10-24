@@ -18,7 +18,7 @@ public class FishingBobberEntityMixin {
 
     @ModifyExpressionValue(method = "tickFishingLogic", at = @At(value = "FIELD",
             target = "Lnet/minecraft/entity/projectile/FishingBobberEntity;waitTimeReductionTicks:I"))
-    private int shinyDepths$shorterWait(int reduction) {
+    private int nowasDepths$shorterWait(int reduction) {
         return Fishing.reduction(((FishingBobberEntity) (Object) this).getPlayerOwner(), waitCountdown, reduction);
     }
 }

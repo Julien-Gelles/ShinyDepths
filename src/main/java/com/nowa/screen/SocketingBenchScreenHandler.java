@@ -22,7 +22,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * L'établi de sertisseur, depuis la refonte du 2026-10-14 : un seul écran, deux entrées, deux sorties.

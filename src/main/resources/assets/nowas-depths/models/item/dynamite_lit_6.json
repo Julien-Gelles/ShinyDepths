@@ -1,0 +1,73 @@
+{
+  "parent": "nowas-depths:item/dynamite_display",
+  "elements": [
+    {
+      "from": [
+        6.5,
+        1,
+        6.5
+      ],
+      "to": [
+        9.5,
+        10,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            3,
+            9
+          ],
+          "texture": "#all"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            3,
+            9
+          ],
+          "texture": "#all"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            3,
+            9
+          ],
+          "texture": "#all"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            3,
+            9
+          ],
+          "texture": "#all"
+        },
+        "up": {
+          "uv": [
+            4,
+            0,
+            7,
+            3
+          ],
+          "texture": "#all"
+        },
+        "down": {
+          "uv": [
+            4,
+            0,
+            7,
+            3
+          ],
+          "texture": "#all"
+        }
+      }
+    }
+  ]
+}

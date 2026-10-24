@@ -19,8 +19,8 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * La lampe frontale : l'outil du mineur plutôt que du lapidaire. Elle éclaire autour de la tête et,

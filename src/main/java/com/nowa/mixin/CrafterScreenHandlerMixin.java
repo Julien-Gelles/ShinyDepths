@@ -35,7 +35,7 @@ public abstract class CrafterScreenHandlerMixin extends ScreenHandler implements
     }
 
     @Inject(method = "updateResult", at = @At("HEAD"))
-    private void shinyDepths$beginPreview(CallbackInfo info) {
+    private void nowasDepths$beginPreview(CallbackInfo info) {
         // côté serveur, l'inventaire de l'écran est le bloc lui-même
         if (inputInventory instanceof CrafterBlockEntity crafter) {
             LapidaryCrafting.enterCrafter(crafter.getPos());
@@ -43,12 +43,12 @@ public abstract class CrafterScreenHandlerMixin extends ScreenHandler implements
     }
 
     @Inject(method = "updateResult", at = @At("RETURN"))
-    private void shinyDepths$endPreview(CallbackInfo info) {
+    private void nowasDepths$endPreview(CallbackInfo info) {
         LapidaryCrafting.leaveCrafter();
     }
 
     @Override
-    public void shinyDepths$refreshPreview() {
+    public void nowasDepths$refreshPreview() {
         updateResult();
         sendContentUpdates();
     }

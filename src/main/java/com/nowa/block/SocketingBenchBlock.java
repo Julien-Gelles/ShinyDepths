@@ -36,7 +36,7 @@ import java.util.Map;
  */
 public class SocketingBenchBlock extends BenchBlock {
     public static final MapCodec<SocketingBenchBlock> CODEC = createCodec(SocketingBenchBlock::new);
-    private static final Text TITLE = Text.translatable("container.shiny-depths.socketing_bench");
+    private static final Text TITLE = Text.translatable("container.nowas-depths.socketing_bench");
     /**
      * La forme de l'établi : le meuble plein jusqu'au plan de travail, sur les deux blocs ; à gauche,
      * de la machine à sertir jusqu'au fond ; à droite, le présentoir à bague, puis le panneau du fond

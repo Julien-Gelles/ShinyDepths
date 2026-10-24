@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pyrite_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nowas-depths:pyrite_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nowas-depths:pyrite_nugget_from_blasting_pyrite_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pyrite_sword"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nowas-depths:pyrite_nugget_from_blasting_pyrite_sword"
+    ]
+  }
+}

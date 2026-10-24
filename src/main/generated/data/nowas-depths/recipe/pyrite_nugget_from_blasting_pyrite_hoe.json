@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "group": "pyrite_nugget",
+  "ingredient": {
+    "item": "nowas-depths:pyrite_hoe"
+  },
+  "result": {
+    "id": "nowas-depths:pyrite_nugget"
+  }
+}

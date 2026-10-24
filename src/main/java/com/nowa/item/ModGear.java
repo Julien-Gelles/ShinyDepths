@@ -26,8 +26,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les panoplies des quatre métaux : épée, pioche, hache, pelle, houe, et pour ceux qui en ont une,

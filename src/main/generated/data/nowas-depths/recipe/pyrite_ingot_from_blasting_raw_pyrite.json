@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "pyrite_ingot",
+  "ingredient": {
+    "item": "nowas-depths:raw_pyrite"
+  },
+  "result": {
+    "id": "nowas-depths:pyrite_ingot"
+  }
+}

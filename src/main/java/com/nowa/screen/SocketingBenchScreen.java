@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * L'écran de l'établi de sertisseur : la case de l'objet à gauche ; au milieu, l'objet posé dessiné
@@ -64,7 +64,7 @@ public class SocketingBenchScreen extends HandledScreen<SocketingBenchScreenHand
     /** La case de la pierre suit l'objet posé : sur le chaton de la bague, sur la lentille de la lampe. */
     private void placeGemSlot() {
         float[] stone = SocketFamily.of(handler.item()) == SocketFamily.LAMP ? LAMP_STONE : RING_STONE;
-        ((MovableSlot) handler.getSlot(SocketingBenchScreenHandler.GEM)).shinyDepths$moveTo(
+        ((MovableSlot) handler.getSlot(SocketingBenchScreenHandler.GEM)).nowasDepths$moveTo(
                 Math.round(ART_X + stone[0] * ART_SCALE) - 8, Math.round(ART_Y + stone[1] * ART_SCALE) - 8);
     }
 

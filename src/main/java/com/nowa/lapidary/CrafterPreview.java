@@ -5,5 +5,5 @@ package com.nowa.lapidary;
  * faire recalculer son aperçu quand ce n'est pas la grille qui a changé, mais le joueur retenu.
  */
 public interface CrafterPreview {
-    void shinyDepths$refreshPreview();
+    void nowasDepths$refreshPreview();
 }

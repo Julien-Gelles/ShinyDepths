@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "J": [
+      {
+        "item": "nowas-depths:amber"
+      },
+      {
+        "item": "nowas-depths:sugilite"
+      },
+      {
+        "item": "nowas-depths:moonstone"
+      },
+      {
+        "item": "minecraft:diamond"
+      },
+      {
+        "item": "minecraft:emerald"
+      },
+      {
+        "item": "nowas-depths:peridot"
+      },
+      {
+        "item": "nowas-depths:tanzanite"
+      },
+      {
+        "item": "nowas-depths:rose_quartz"
+      },
+      {
+        "item": "nowas-depths:garnet"
+      },
+      {
+        "item": "nowas-depths:tourmaline"
+      },
+      {
+        "item": "nowas-depths:blue_topaz"
+      },
+      {
+        "item": "nowas-depths:jade"
+      },
+      {
+        "item": "nowas-depths:onyx"
+      },
+      {
+        "item": "nowas-depths:sapphire"
+      },
+      {
+        "item": "nowas-depths:ruby"
+      }
+    ],
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "GGG",
+    " J ",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nowas-depths:gem_showcase"
+  }
+}

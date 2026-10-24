@@ -58,7 +58,7 @@ public enum GemPower {
     }
 
     public Text displayName() {
-        return Text.translatable("power.shiny-depths." + id);
+        return Text.translatable("power.nowas-depths." + id);
     }
 
     /** Le pouvoir que donne cette pierre, ou {@code null} si elle n'en donne pas. */

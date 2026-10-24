@@ -7,13 +7,13 @@ import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Le dessin de la dynamite : un modèle en volume, en main comme en vol, dont la mèche se consume
  * d'après l'instant où elle doit exploser.
  *
- * <p>La propriété {@code shiny-depths:fuse} vaut 0 pour un bâton éteint, puis monte d'un cran par
+ * <p>La propriété {@code nowas-depths:fuse} vaut 0 pour un bâton éteint, puis monte d'un cran par
  * petit cube de mèche brûlé ; le modèle de l'objet passe d'une forme à la suivante sur ces seuils.
  */
 public final class DynamiteClient {

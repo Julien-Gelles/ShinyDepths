@@ -50,7 +50,7 @@ public class FusionCrucibleBlockEntity extends BlockEntity implements NamedScree
     private static final int[] OUTPUTS = {OUTPUT};
     private static final String ITEMS = "items", PROGRESS = "progress", FAST = "fast_fusion", RECOVERY = "recovery",
             RECOVERY_COUNT = "recovery_count", RECOVERY_CHANCE = "recovery_chance";
-    private static final Text TITLE = Text.translatable("container.shiny-depths.fusion_crucible");
+    private static final Text TITLE = Text.translatable("container.nowas-depths.fusion_crucible");
 
     private static int fusionTicks = 100;
 

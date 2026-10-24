@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class FishingRodItemMixin {
     @WrapOperation(method = "use", at = @At(value = "NEW",
             target = "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;II)Lnet/minecraft/entity/projectile/FishingBobberEntity;"))
-    private FishingBobberEntity shinyDepths$fishingLuck(PlayerEntity thrower, World world, int luck, int waitReduction,
+    private FishingBobberEntity nowasDepths$fishingLuck(PlayerEntity thrower, World world, int luck, int waitReduction,
                                                        Operation<FishingBobberEntity> original) {
         return original.call(thrower, world, Fishing.luck(thrower, luck), waitReduction);
     }

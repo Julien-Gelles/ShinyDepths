@@ -14,8 +14,8 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
 import java.util.Map;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les coffres des structures du jeu — villages, temples, donjons, mines, épaves, avant-postes… —

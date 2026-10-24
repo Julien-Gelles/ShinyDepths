@@ -23,7 +23,7 @@ public class SlotMixin implements MovableSlot {
     public int y;
 
     @Override
-    public void shinyDepths$moveTo(int newX, int newY) {
+    public void nowasDepths$moveTo(int newX, int newY) {
         this.x = newX;
         this.y = newY;
     }

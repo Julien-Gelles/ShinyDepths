@@ -28,7 +28,7 @@ import org.lwjgl.glfw.GLFW;
 /** Côté client du métier : touche K, bouton dans le menu Échap, notification de niveau, infobulles de pureté. */
 public final class LapidaryClient {
     public static final KeyBinding OPEN_SCREEN = new KeyBinding(
-            "key.shiny-depths.lapidary", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_K, "category.shiny-depths");
+            "key.nowas-depths.lapidary", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_K, "category.nowas-depths");
 
     private LapidaryClient() {
     }
@@ -46,7 +46,7 @@ public final class LapidaryClient {
         ItemTooltipCallback.EVENT.register((stack, tooltipContext, tooltipType, lines) -> {
             Purity purity = stack.get(ModDataComponents.PURITY);
             if (purity != null) {
-                lines.add(1, Text.translatable("purity.shiny-depths.tooltip", purity.displayName()).formatted(Formatting.GRAY));
+                lines.add(1, Text.translatable("purity.nowas-depths.tooltip", purity.displayName()).formatted(Formatting.GRAY));
             }
         });
 
@@ -66,7 +66,7 @@ public final class LapidaryClient {
             if (widget.getMessage().getContent() instanceof TranslatableTextContent content
                     && content.getKey().equals("gui.advancements")) {
                 ItemIconButton button = new ItemIconButton(widget.getX() - 24, widget.getY(),
-                        Text.translatable("lapidary.shiny-depths.screen.title"), new ItemStack(ModItems.POLISHER),
+                        Text.translatable("lapidary.nowas-depths.screen.title"), new ItemStack(ModItems.POLISHER),
                         b -> client.setScreen(new LapidaryScreen()));
                 Screens.getButtons(screen).add(button);
                 return;

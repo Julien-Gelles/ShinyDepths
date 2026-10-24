@@ -32,7 +32,7 @@ public abstract class InventoryScreenMixin extends AbstractInventoryScreen<Playe
     }
 
     @Inject(method = "drawBackground", at = @At("TAIL"))
-    private void shinyDepths$jewelryFrames(DrawContext context, float delta, int mouseX, int mouseY,
+    private void nowasDepths$jewelryFrames(DrawContext context, float delta, int mouseX, int mouseY,
                                            CallbackInfo info) {
         for (Worn place : Worn.values()) {
             context.drawTexture(JewelryPanel.TEXTURE,
@@ -48,7 +48,7 @@ public abstract class InventoryScreenMixin extends AbstractInventoryScreen<Playe
      * survoler la pierre du coin donne le set porté et ses niveaux.
      */
     @Inject(method = "render", at = @At("TAIL"))
-    private void shinyDepths$setsTooltip(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo info) {
+    private void nowasDepths$setsTooltip(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo info) {
         PowersPanel.drawInventoryFrames(context, this.x + this.backgroundWidth + 2, this.y, this.width);
         PowersPanel.drawCornerTooltip(context, this.textRenderer, this.x + POWER_X, this.y + POWER_Y, mouseX, mouseY);
     }

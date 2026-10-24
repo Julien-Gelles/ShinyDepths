@@ -1,8 +1,8 @@
 {
   "values": [
-    "shiny-depths:platinum_ore",
-    "shiny-depths:deepslate_platinum_ore",
-    "shiny-depths:deepslate_sapphire_ore",
-    "shiny-depths:tanzanite_ore"
+    "nowas-depths:platinum_ore",
+    "nowas-depths:deepslate_platinum_ore",
+    "nowas-depths:deepslate_sapphire_ore",
+    "nowas-depths:tanzanite_ore"
   ]
 }

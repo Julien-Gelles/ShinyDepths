@@ -85,7 +85,7 @@ public enum Purity implements StringIdentifiable {
     }
 
     public Text displayName() {
-        return Text.translatable("purity.shiny-depths." + name).formatted(color);
+        return Text.translatable("purity.nowas-depths." + name).formatted(color);
     }
 
     @Override

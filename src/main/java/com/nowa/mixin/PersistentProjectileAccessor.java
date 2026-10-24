@@ -8,5 +8,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(PersistentProjectileEntity.class)
 public interface PersistentProjectileAccessor {
     @Invoker("setPierceLevel")
-    void shinyDepths$setPierceLevel(byte level);
+    void nowasDepths$setPierceLevel(byte level);
 }

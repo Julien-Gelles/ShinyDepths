@@ -17,8 +17,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Point d'entrée du métier de lapidaire : données par joueur (sauvegardées, gardées à la mort,
@@ -73,7 +73,7 @@ public final class Lapidary {
         LapidaryData before = get(player);
         LapidaryData after = before.withXp(before.xp() + amount);
         set(player, after);
-        player.sendMessage(Text.translatable("lapidary.shiny-depths.xp_gained", amount).formatted(Formatting.AQUA), true);
+        player.sendMessage(Text.translatable("lapidary.nowas-depths.xp_gained", amount).formatted(Formatting.AQUA), true);
         if (after.level() > before.level()) {
             onLevelUp(player, after.level());
         }
@@ -83,8 +83,8 @@ public final class Lapidary {
         player.getServerWorld().playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.PLAYERS, 0.6f, 1.4f);
         ModMessages.send(player, new ModMessages.Message("lapidary_level",
-                Text.translatable("lapidary.shiny-depths.toast.title", level),
-                Text.translatable("lapidary.shiny-depths.toast.description"),
+                Text.translatable("lapidary.nowas-depths.toast.title", level),
+                Text.translatable("lapidary.nowas-depths.toast.description"),
                 new ItemStack(ModItems.POLISHER), ModMessages.Style.ACHIEVEMENT));
     }
 

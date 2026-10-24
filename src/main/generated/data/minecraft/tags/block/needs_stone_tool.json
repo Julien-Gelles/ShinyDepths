@@ -1,18 +1,18 @@
 {
   "values": [
-    "shiny-depths:platinum_block",
-    "shiny-depths:pyrite_block",
-    "shiny-depths:cobalt_block",
-    "shiny-depths:titanium_block",
-    "shiny-depths:raw_platinum_block",
-    "shiny-depths:raw_pyrite_block",
-    "shiny-depths:raw_cobalt_block",
-    "shiny-depths:raw_titanium_block",
-    "shiny-depths:pyrite_ore",
-    "shiny-depths:garnet_ore",
-    "shiny-depths:amber_ore",
-    "shiny-depths:jade_ore",
-    "shiny-depths:rose_quartz_ore",
-    "shiny-depths:onyx_ore"
+    "nowas-depths:platinum_block",
+    "nowas-depths:pyrite_block",
+    "nowas-depths:cobalt_block",
+    "nowas-depths:titanium_block",
+    "nowas-depths:raw_platinum_block",
+    "nowas-depths:raw_pyrite_block",
+    "nowas-depths:raw_cobalt_block",
+    "nowas-depths:raw_titanium_block",
+    "nowas-depths:pyrite_ore",
+    "nowas-depths:garnet_ore",
+    "nowas-depths:amber_ore",
+    "nowas-depths:jade_ore",
+    "nowas-depths:rose_quartz_ore",
+    "nowas-depths:onyx_ore"
   ]
 }

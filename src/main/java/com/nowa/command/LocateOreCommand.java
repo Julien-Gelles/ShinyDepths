@@ -50,9 +50,9 @@ public final class LocateOreCommand {
     private static final int DEFAULT_RADIUS = 8;
     private static final int MAX_RADIUS = 32;
     private static final SimpleCommandExceptionType NOT_FOUND =
-            new SimpleCommandExceptionType(Text.translatable("commands.shiny-depths.locate_ore.not_found"));
+            new SimpleCommandExceptionType(Text.translatable("commands.nowas-depths.locate_ore.not_found"));
     private static final SimpleCommandExceptionType NOT_AN_ORE =
-            new SimpleCommandExceptionType(Text.translatable("commands.shiny-depths.locate_ore.not_an_ore"));
+            new SimpleCommandExceptionType(Text.translatable("commands.nowas-depths.locate_ore.not_an_ore"));
 
     private LocateOreCommand() {
     }
@@ -146,7 +146,7 @@ public final class LocateOreCommand {
         BlockPos target = nearest;
         int total = found;
         int chunks = scanned;
-        source.sendFeedback(() -> Text.translatable("commands.shiny-depths.locate_ore.success",
+        source.sendFeedback(() -> Text.translatable("commands.nowas-depths.locate_ore.success",
                 wanted.asString(), coordinates(target), (int) Math.sqrt(target.getSquaredDistance(origin)), total, chunks), false);
         return (int) Math.sqrt(nearestDistance);
     }

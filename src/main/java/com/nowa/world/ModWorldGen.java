@@ -39,8 +39,8 @@ import net.minecraft.world.gen.feature.PlacedFeatures;
 
 import java.util.function.Predicate;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Branche les gisements de {@link OreDeposits} sur la génération du monde : les features sont

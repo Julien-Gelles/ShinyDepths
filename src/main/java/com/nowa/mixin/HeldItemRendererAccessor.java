@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(HeldItemRenderer.class)
 public interface HeldItemRendererAccessor {
     @Accessor("mainHand")
-    void shinyDepths$setMainHand(ItemStack stack);
+    void nowasDepths$setMainHand(ItemStack stack);
 
     @Accessor("offHand")
-    void shinyDepths$setOffHand(ItemStack stack);
+    void nowasDepths$setOffHand(ItemStack stack);
 }

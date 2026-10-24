@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "group": "cobalt_nugget",
+  "ingredient": {
+    "item": "nowas-depths:cobalt_shovel"
+  },
+  "result": {
+    "id": "nowas-depths:cobalt_nugget"
+  }
+}

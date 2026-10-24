@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Écran de la table de lapidaire : le fond du four, sans combustible ni flamme.

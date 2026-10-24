@@ -13,7 +13,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /** Sachet à pierres + colorant = sachet de cette couleur, contenu conservé (comme les bundles colorés). */
 public class PouchDyeRecipe extends SpecialCraftingRecipe {

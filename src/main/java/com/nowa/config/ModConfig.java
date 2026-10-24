@@ -17,11 +17,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
- * Le fichier de réglages du mod : {@code config/shiny-depths.json}.
+ * Le fichier de réglages du mod : {@code config/nowas-depths.json}.
  *
  * <p>Tout nombre qui décide de quelque chose y figure, sous une clé en points
  * ({@code gear.platinum.armor.helmet.protection}) écrite dans le fichier comme une arborescence.
@@ -31,7 +31,7 @@ import static com.nowa.ShinyDepths.MOD_ID;
  * ajoutées à leur valeur d'origine.
  *
  * <p>Chaque système lit ses valeurs dans un {@link #onApply(Runnable) rappel} plutôt qu'au fil de
- * l'eau : c'est ce qui permet de tout relire d'un coup avec {@code /shiny-depths config reload}.
+ * l'eau : c'est ce qui permet de tout relire d'un coup avec {@code /nowas-depths config reload}.
  * Les réglages cuits dans un objet au moment de son enregistrement — durabilité, protection,
  * dégâts — font exception : ceux-là demandent un redémarrage.
  */
@@ -39,11 +39,11 @@ public final class ModConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final String HEADER = "_lisez_moi";
     private static final String HEADER_TEXT =
-            "Réglages de Shiny Depths. Chaque valeur peut être modifiée ; supprimer une clé la "
+            "Réglages de Nowa's Depths. Chaque valeur peut être modifiée ; supprimer une clé la "
                     + "remet à sa valeur d'origine au prochain démarrage. Les réglages d'équipement "
                     + "(durabilité, protection, dégâts) sont appliqués à l'enregistrement des objets "
                     + "et demandent un redémarrage ; les autres se rechargent avec "
-                    + "/shiny-depths config reload.";
+                    + "/nowas-depths config reload.";
 
     /** Ce que le fichier contenait au dernier chargement. */
     private static final Map<String, JsonPrimitive> stored = new TreeMap<>();

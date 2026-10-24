@@ -13,8 +13,8 @@ import net.minecraft.util.Identifier;
 import java.util.EnumMap;
 import java.util.Map;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 public class ModItems {
     public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings()));

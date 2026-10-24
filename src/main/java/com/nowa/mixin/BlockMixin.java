@@ -22,7 +22,7 @@ import java.util.List;
 public class BlockMixin {
     @ModifyReturnValue(method = "getDroppedStacks(Lnet/minecraft/block/BlockState;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/item/ItemStack;)Ljava/util/List;",
             at = @At("RETURN"))
-    private static List<ItemStack> shinyDepths$smelting(List<ItemStack> drops, BlockState state, ServerWorld world, BlockPos pos,
+    private static List<ItemStack> nowasDepths$smelting(List<ItemStack> drops, BlockState state, ServerWorld world, BlockPos pos,
                                                        BlockEntity blockEntity, Entity breaker, ItemStack tool) {
         return Smelting.drops(drops, world, breaker, tool);
     }

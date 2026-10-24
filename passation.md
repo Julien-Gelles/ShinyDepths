@@ -17,8 +17,8 @@ plus les siens. Le fil rouge est un jeu de **métiers** façon RPG. Il a deux mo
 
 | Mod | Dossier | État |
 |---|---|---|
-| **Nowa's Depths** — s'appelait *Shiny Depths* jusqu'ici | `C:\Users\Nowa\Documents\ShinyDepths` | Bien avancé : minerais, pierres, polissage, pureté, bagues à pouvoirs, métier de lapidaire, villageois, lampe frontale, dynamite |
-| **Nowa's Horizons** — nouveau mod de **biomes** | à créer, dossier frère : `C:\Users\Nowa\Documents\<dossier Horizons>` | Rien n'existe encore : **le squelette est à faire** |
+| **Nowa's Depths** — s'appelait *Shiny Depths* jusqu'au 2026-10-24 | `C:\Users\Nowa\Documents\NowasMod\NowasDepths` | Bien avancé : minerais, pierres, polissage, pureté, bagues à pouvoirs, métier de lapidaire, villageois, lampe frontale, dynamite |
+| **Nowa's Horizons** — nouveau mod de **biomes** | à créer, dossier frère : `C:\Users\Nowa\Documents\NowasMod\NowasHorizons` | Rien n'existe encore : **le squelette est à faire** |
 
 **Pourquoi un mod de biomes à lui** : il voulait placer les pierres de Depths par biome. Il aime
 certains biomes et en déteste d'autres dans chaque mod de biomes existant, donc aucun ne lui convient
@@ -65,9 +65,8 @@ Points déjà expliqués et acceptés :
 
 ## 3. Préférences de l'utilisateur (tirées de la mémoire de travail)
 
-La mémoire de Claude est rangée **par dossier de travail**. Pour l'instant, elle vit sous
-`C:\Users\Nowa\.claude\projects\C--Users-Nowa-Documents-ShinyDepths\memory\`. Un chat ouvert sur un
-autre dossier **ne la verra pas** ; d'où ce résumé. Voir aussi § 10.
+La mémoire de Claude est rangée **par dossier de travail** (voir § 10). Un chat ouvert sur un
+dossier dont la mémoire n'a pas été copiée **ne la verra pas** ; d'où ce résumé.
 
 - **Profil** : sous Windows, IntelliJ, Claude Code dans l'application de bureau. Débutant à
   intermédiaire en git : un fichier créé hors d'IntelliJ reste « Unversioned » tant qu'on ne fait pas
@@ -115,11 +114,11 @@ autre dossier **ne la verra pas** ; d'où ce résumé. Voir aussi § 10.
 
 | | |
 |---|---|
-| Dossier | `C:\Users\Nowa\Documents\ShinyDepths` |
+| Dossier | `C:\Users\Nowa\Documents\NowasMod\NowasDepths` (déplacé par l'utilisateur après le renommage) |
 | Minecraft | 1.21.1 · Yarn `1.21.1+build.3` · Fabric Loader 0.16.14 · Fabric API `0.116.17+1.21.1` · Loom `1.10-SNAPSHOT` |
 | Java | 21 — `export JAVA_HOME="C:/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot"` |
-| Paquet | `com.nowa` · `MOD_ID = "shiny-depths"` · `archives_base_name=shiny-depths` |
-| Branche | `feat/jewelry` (base `master`). **~1 270 fichiers modifiés non commités** à ce jour |
+| Paquet | `com.nowa` · `MOD_ID = "nowas-depths"` · `archives_base_name=nowas-depths` · point d'entrée `NowasDepths` |
+| Branche | `feat/jewelry` (base `master`). Dernier commit de l'utilisateur : « NowasDepths v0.1 » ; **le renommage est dans l'index, pas commité** |
 
 ```bash
 ./gradlew build -x test -q   # build complet (le plus utilisé)
@@ -128,7 +127,7 @@ autre dossier **ne la verra pas** ; d'où ce résumé. Voir aussi § 10.
 ```
 
 - `runDatagen` est le meilleur test automatique : il charge le mod, ses mixins et sa configuration.
-- Les cibles des mixins se vérifient dans `build/classes/java/main/shiny-depths-refmap.json`.
+- Les cibles des mixins se vérifient dans `build/classes/java/main/nowas-depths-refmap.json`.
 - Le jeu n'est **jamais** lancé par Claude : l'utilisateur teste et rapporte.
 
 ---
@@ -147,7 +146,7 @@ Détail complet dans `docs/`. Résumé par système :
   deepslate, calcite.
 - **Génération** : `world/OreDeposits` (18 gisements), `ModWorldGen`, `ModBiomeTags`.
   - Chaque pierre a une veine de fond dans toute sa dimension, plus un **bonus de densité** dans des
-    biomes favoris, désignés par des tags `shiny-depths:has_ore/<pierre>` remplis avec les tags
+    biomes favoris, désignés par des tags `nowas-depths:has_ore/<pierre>` remplis avec les tags
     conventionnels `c:`.
   - Le biome n'est **jamais une condition**, seulement un bonus.
   - Seul `worldgen.<gisement>.enabled` est réglable ; tailles, hauteurs et densités sont en dur dans
@@ -229,7 +228,7 @@ armures ne se sertissent plus depuis le 2026-10-14. Retirer une pierre est sans 
 - **Deux onglets créatifs** : *Lapidaire* (icône polissoir) et *Mineur* (icône lampe frontale).
 - **Supprimés le 2026-10-22, à ne pas recréer** : le mannequin d'entraînement et l'encadré de la
   créature survolée. Ils ne servaient qu'aux tests.
-- **Configuration** — `docs/config.md` : un seul `config/shiny-depths.json` d'environ 400 clés, qui se
+- **Configuration** — `docs/config.md` : un seul `config/nowas-depths.json` d'environ 400 clés, qui se
   réécrit à chaque démarrage.
 
 ---
@@ -250,9 +249,10 @@ armures ne se sertissent plus depuis le 2026-10-14. Retirer une pierre est sans 
 
 2. **La génération par biome** l'a amené à vouloir **son propre mod de biomes** (§ 1).
 
-3. **Il ouvre une nouvelle conversation** qui travaillera **dans les deux dossiers**. Il a annoncé :
-   - le **renommage** de Shiny Depths en **Nowa's Depths** ;
-   - la **création du squelette** de Nowa's Horizons.
+3. **Le renommage en Nowa's Depths est fait** (2026-10-24, renommage complet, voir § 9.1).
+
+4. **Il ouvre une nouvelle conversation** sur `Documents\NowasMod`, qui contiendra les deux mods. La
+   première tâche est la **création du squelette** de Nowa's Horizons.
 
 ---
 
@@ -272,7 +272,7 @@ Les noms Yarn 1.21.1 surprennent souvent.
 - **Ajouter un réglage** : un nouveau chiffre se lit par `ModConfig.i/d/f/flag/text/ints/doubles`,
   dans un bloc `static { ModConfig.onApply(...) }`. C'est ce qui l'inscrit dans le fichier.
 - **Le piège** : le fichier **garde les valeurs déjà écrites**. Changer un défaut dans le code ne
-  change rien à `run/config/shiny-depths.json`. Pour un rééquilibrage, il faut retirer les clés
+  change rien à `run/config/nowas-depths.json`. Pour un rééquilibrage, il faut retirer les clés
   concernées de ce fichier (déjà fait pour `lapidary.tree` et `villager.lapidary.purity_worth.pure`).
 
 ### Édition de fichiers (Windows)
@@ -293,9 +293,9 @@ l'utilisateur avant de conclure.
 
 ```
 src/main/java/com/nowa/
-  ShinyDepths.java / ShinyDepthsClient.java / ShinyDepthsDataGenerator.java
+  NowasDepths.java / NowasDepthsClient.java / NowasDepthsDataGenerator.java
   block/      blocs, minerais (ModOres), établis, vitrine, lanterne
-  command/    /locate ore, /shinydepths config
+  command/    /locate ore, /nowasdepths config, /nowasdepths purity
   config/     ModConfig
   datagen/    tags, butin, modèles, recettes, biomes, worldgen
   dynamite/   dynamite
@@ -305,7 +305,7 @@ src/main/java/com/nowa/
   jewelry/    case de bague, sauvegarde
   lapidary/   métier : niveaux, arbre (LapidarySkillTree), bonus (LapidaryBonuses), écran
   message/    bandeaux et toasts
-  mixin/      22 mixins communs + 8 clients (liste dans shiny-depths.mixins.json)
+  mixin/      22 mixins communs + 8 clients (liste dans nowas-depths.mixins.json)
   powers/     les 15 pouvoirs de bague
   screen/     écrans des établis et de la vitrine
   socket/     sertissage
@@ -322,24 +322,30 @@ src/main/java/com/nowa/
 
 ## 9. Prochaines étapes, dans l'ordre conseillé
 
-### 9.1 Avant tout : commit par l'utilisateur
-~1 270 fichiers non commités sur `feat/jewelry`. **Lui suggérer de commiter** avant le renommage, qui
-touchera beaucoup de fichiers. Ne pas le faire à sa place.
+### 9.1 Fait : le renommage complet (2026-10-24)
+L'utilisateur avait commité juste avant (« NowasDepths v0.1 »). Le renommage a été fait par script
+et vérifié par `clean build` puis `runDatagen` :
 
-### 9.2 Renommer Shiny Depths en Nowa's Depths — **à cadrer avec lui d'abord**
-Il faut lui faire préciser jusqu'où va le renommage :
+- nom affiché « Nowa's Depths » ; identifiant `shiny-depths` → **`nowas-depths`** partout :
+  - dossiers `assets/` et `data/` (sources et générés) ;
+  - identifiants, tags, traductions ;
+  - `nowas-depths.mixins.json`, `archives_base_name` ;
+- classes `ShinyDepths*` → `NowasDepths*` ; commande `/shinydepths` → **`/nowasdepths`** ;
+  préfixe des méthodes de mixin `shinyDepths$` → `nowasDepths$` ;
+- config de test renommée `run/config/nowas-depths.json`, valeurs gardées ;
+- le paquet Java reste `com.nowa`.
 
-| Niveau | Ce qui change | Conséquence |
-|---|---|---|
-| **Nom affiché** seulement | `fabric.mod.json` (`name`), onglets créatifs, titres, docs | Sans risque |
-| **Identifiant de mod** `shiny-depths` → par ex. `nowas-depths` | `MOD_ID`, le dossier `assets/shiny-depths` et `data/shiny-depths`, tous les identifiants (objets, blocs, tags `shiny-depths:*`), clés de traduction, nom du fichier de config, `archives_base_name`, nom du fichier des mixins | **Casse les mondes de test existants** : tous les objets et blocs du mod y disparaissent. Gros changement mécanique, à faire en une fois, par script, puis `runDatagen` |
-| Paquet Java `com.nowa` | rien d'obligatoire | Déjà neutre, peut rester |
-| Dossier `ShinyDepths` | facultatif | Déplace la mémoire de Claude (§ 10) |
+**Conséquence assumée** : les mondes de test d'avant ont perdu les objets et blocs du mod. Il faut un
+nouveau monde.
 
-Un identifiant ne peut contenir que `a-z 0-9 - _` : **pas d'apostrophe**. « Nowa's Depths » reste
-possible comme nom affiché.
+Le renommage a été mis dans l'index git (`git add -A`) pour que git voie des renommages, **pas
+commité** : à l'utilisateur de le faire.
 
-### 9.3 Créer le squelette de Nowa's Horizons
+Reste à faire par l'utilisateur : **déplacer le dossier** `Documents\ShinyDepths` vers
+`Documents\NowasMod\NowasDepths` (IntelliJ, jeu et Gradle fermés : `./gradlew --stop`), puis rouvrir
+le projet dans IntelliJ.
+
+### 9.2 Créer le squelette de Nowa's Horizons
 1. **Noms** :
    - **Dossier sans apostrophe** (par ex. `NowasHorizons`) : l'apostrophe casse des scripts et
      certains outils.
@@ -361,24 +367,24 @@ possible comme nom affiché.
    biomes** :
    - Horizons range ses biomes dans les tags conventionnels `c:` (`c:is_hot`, `c:is_jungle`…) et
      dans ses propres tags ;
-   - Depths lit `shiny-depths:has_ore/<pierre>`. On peut y ajouter des biomes d'Horizons en entrées
+   - Depths lit `nowas-depths:has_ore/<pierre>`. On peut y ajouter des biomes d'Horizons en entrées
      facultatives (`required: false`), ignorées si Horizons est absent.
 6. **Mécanisme de placement des biomes** (TerraBlender ou réécriture du bruit vanilla) : le présenter
    à l'utilisateur avec ses compromis **avant** de coder.
 
-### 9.4 Ensuite, côté génération des pierres (Depths)
+### 9.3 Ensuite, côté génération des pierres (Depths)
 - **Sa répartition** : attendre sa répartition des pierres par dimension (§ 6), puis ses **visuels de
   blocs** de minerai (une variante par roche hôte : pierre, deepslate, netherrack, end stone).
 - **Familles de biomes** : rattacher chaque pierre à une **grande famille de biomes** (chaud et sec,
   humide, froid, océan, montagne, grottes…) plutôt qu'à des biomes précis, pour que ça tienne avec
   beaucoup de biomes.
-- **Commande de vérification** proposée : `/shinydepths biomes`, qui liste les biomes chargés où chaque
+- **Commande de vérification** proposée : `/nowasdepths biomes`, qui liste les biomes chargés où chaque
   pierre a son bonus.
 - **Réglages de génération vivants** : rendre la taille des veines, les hauteurs et la densité
   réglables. Il faut enregistrer les features au chargement au lieu du JSON généré : un changement
   de structure, voir `docs/config.md`.
 
-### 9.5 Liste de fond (à son initiative, ne pas lancer seul)
+### 9.4 Liste de fond (à son initiative, ne pas lancer seul)
 - **Écrire les 3 livres du guide** du mod, et les donner au déblocage des nœuds de livre, y compris
   aux joueurs qui les ont déjà débloqués (point d'accroche : `Lapidary.tryUnlock`).
 - **Textures** : bagues (redessiner la bague en platine régénère les quatre), blocs de pierres et
@@ -394,18 +400,23 @@ possible comme nom affiché.
 
 ## 10. La mémoire de Claude et le nouveau dossier
 
-- **Où vit la mémoire** : `C:\Users\Nowa\.claude\projects\C--Users-Nowa-Documents-ShinyDepths\memory\`,
-  un fichier par sujet plus un index `MEMORY.md`. Elle n'est chargée que si la conversation est
-  ouverte sur **ce** dossier.
-- **Organisation conseillée** :
-  - ouvrir le nouveau chat sur `ShinyDepths` (dossier principal) ;
-  - **ajouter le dossier d'Horizons à la session** (ajout de dossier dans l'application, ou demande
-    d'accès par Claude) : les deux mods sont alors lisibles et modifiables, et la mémoire reste
-    chargée.
-- **Si le chat est ouvert ailleurs** (par exemple sur `Documents`), copier le dossier `memory` vers
-  le dossier de mémoire du nouveau chemin, ou se fier à ce document.
-- **Si le dossier ShinyDepths est renommé**, la mémoire ne suit pas : la copier vers le nouveau
-  chemin.
+- **Où vit la mémoire** : un dossier par chemin de projet, sous `C:\Users\Nowa\.claude\projects\`.
+  Son nom est le chemin, `:` et `\` remplacés par des tirets. Il contient un fichier par sujet plus
+  un index `MEMORY.md`, et n'est chargé que si la conversation est ouverte sur **ce** chemin.
+- **Jusqu'ici** : `C:\Users\Nowa\.claude\projects\C--Users-Nowa-Documents-ShinyDepths\memory\`.
+- **Organisation retenue** : le nouveau chat est ouvert sur **`C:\Users\Nowa\Documents\NowasMod`**,
+  qui contient `NowasDepths` et `NowasHorizons`. Les deux mods sont visibles sans rien ajouter à la
+  session, et une seule mémoire sert aux deux.
+- **À faire par l'utilisateur avant d'ouvrir ce chat** : copier la mémoire vers
+  `C:\Users\Nowa\.claude\projects\C--Users-Nowa-Documents-NowasMod\memory\` :
+  ```bash
+  mkdir -p "/c/Users/Nowa/.claude/projects/C--Users-Nowa-Documents-NowasMod" && cp -r "/c/Users/Nowa/.claude/projects/C--Users-Nowa-Documents-ShinyDepths/memory" "/c/Users/Nowa/.claude/projects/C--Users-Nowa-Documents-NowasMod/"
+  ```
+  Copier plutôt que déplacer : l'ancienne reste en sauvegarde.
+- **Vérification** : si le nouveau chat ne sait pas qu'il ne doit jamais commiter, la mémoire n'est
+  pas chargée. Se fier alors à ce document.
+- **Mémoire à mettre à jour** : plusieurs souvenirs parlent encore de « Shiny Depths » et de
+  `shiny-depths`. C'est l'ancien nom du même mod ; ils restent valables.
 
 ---
 

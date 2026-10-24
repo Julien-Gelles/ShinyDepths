@@ -35,8 +35,8 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Le villageois lapidaire. Il prend son métier devant une vitrine à pierres. Il vend des pierres

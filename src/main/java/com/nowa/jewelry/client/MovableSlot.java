@@ -7,5 +7,5 @@ package com.nowa.jewelry.client;
  * sert à les replacer, côté client uniquement.
  */
 public interface MovableSlot {
-    void shinyDepths$moveTo(int x, int y);
+    void nowasDepths$moveTo(int x, int y);
 }

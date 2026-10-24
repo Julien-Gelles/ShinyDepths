@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "group": "platinum_ingot",
+  "ingredient": {
+    "item": "nowas-depths:raw_platinum"
+  },
+  "result": {
+    "id": "nowas-depths:platinum_ingot"
+  }
+}

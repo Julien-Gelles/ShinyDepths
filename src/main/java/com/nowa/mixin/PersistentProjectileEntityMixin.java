@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class PersistentProjectileEntityMixin {
     @WrapOperation(method = "onEntityHit", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/entity/projectile/PersistentProjectileEntity;onHit(Lnet/minecraft/entity/LivingEntity;)V"))
-    private void shinyDepths$piercing(PersistentProjectileEntity arrow, LivingEntity target, Operation<Void> original) {
+    private void nowasDepths$piercing(PersistentProjectileEntity arrow, LivingEntity target, Operation<Void> original) {
         original.call(arrow, target);
         Piercing.hit(arrow);
     }

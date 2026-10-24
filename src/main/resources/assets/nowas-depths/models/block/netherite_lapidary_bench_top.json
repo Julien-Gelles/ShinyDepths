@@ -1,0 +1,6 @@
+{
+ "parent": "nowas-depths:block/lapidary_bench_top",
+ "textures": {
+  "metal": "minecraft:block/netherite_block"
+ }
+}

@@ -10,7 +10,7 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.List;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Ce que la lampe frontale fait voir — le battement des pierres, les lanternes de cobalt — du serveur

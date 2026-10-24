@@ -1,4 +1,4 @@
-# Lampe frontale — Shiny Depths
+# Lampe frontale — Nowa's Depths
 
 L'outil du mineur, et non du lapidaire : n'importe quel joueur peut la fabriquer et s'en servir,
 sans niveau de métier. Elle se porte **à la place du casque**, éclaire autour de la tête, et,
@@ -23,8 +23,8 @@ pourvu qu'elle soit **au moins limpide** (limpide, pure ou philosophale) ; une p
 passe pas. Le livre de recettes fait défiler les pierres acceptées. (Depuis le 2026-10-18 : c'était
 une pierre de bismuth, avant la suppression du bismuth.) Aucun niveau de lapidaire n'est demandé.
 
-C'est un ingrédient à nous, `shiny-depths:min_purity` (`MinPurityIngredient`), qu'une autre recette
-peut reprendre : `{"fabric:type": "shiny-depths:min_purity", "min_purity": "clear"}`.
+C'est un ingrédient à nous, `nowas-depths:min_purity` (`MinPurityIngredient`), qu'une autre recette
+peut reprendre : `{"fabric:type": "nowas-depths:min_purity", "min_purity": "clear"}`.
 
 ## Se porter
 
@@ -105,7 +105,7 @@ sertissage), la lanterne rien de plus que son nom.
 
 ## Réglages
 
-Tout est sous `headlamp` dans `config/shiny-depths.json`.
+Tout est sous `headlamp` dans `config/nowas-depths.json`.
 
 | Clé | Défaut | Ce qu'elle fait |
 |---|---|---|
@@ -133,4 +133,4 @@ dépend.
 - `HeadlampLight`, `HeadlampLightBlock` : la lumière.
 - `GemSense`, `HeadlampNetworking`, `client/GemSenseRenderer` : le battement.
 - `LanternSight`, et `com.nowa.world.LanternBeacons` : les lanternes de cobalt vues à travers la roche.
-- `SocketFamily.LAMP` et le tag `#shiny-depths:socketable/headlamp` : la famille de sertissage.
+- `SocketFamily.LAMP` et le tag `#nowas-depths:socketable/headlamp` : la famille de sertissage.

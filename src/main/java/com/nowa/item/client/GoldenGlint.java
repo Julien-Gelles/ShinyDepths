@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 import java.util.List;
 import java.util.SequencedMap;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Le reflet des pierres philosophales : le miroitement de l'enchantement, mais doré.
@@ -30,7 +30,7 @@ public final class GoldenGlint {
     private static final Identifier ENTITY_TEXTURE = Identifier.of(MOD_ID, "textures/misc/golden_glint_entity.png");
 
     /** Copie de {@code RenderLayer.getGlint()} : le reflet des objets, en inventaire comme en main. */
-    public static final RenderLayer ITEM = RenderLayer.of("shiny_depths_golden_glint",
+    public static final RenderLayer ITEM = RenderLayer.of("nowas_depths_golden_glint",
             VertexFormats.POSITION_TEXTURE, VertexFormat.DrawMode.QUADS, 1536,
             RenderLayer.MultiPhaseParameters.builder()
                     .program(RenderPhase.GLINT_PROGRAM)
@@ -43,7 +43,7 @@ public final class GoldenGlint {
                     .build(false));
 
     /** Copie de {@code RenderLayer.getEntityGlint()} : l'objet posé dans le monde. */
-    public static final RenderLayer ENTITY = RenderLayer.of("shiny_depths_golden_glint_entity",
+    public static final RenderLayer ENTITY = RenderLayer.of("nowas_depths_golden_glint_entity",
             VertexFormats.POSITION_TEXTURE, VertexFormat.DrawMode.QUADS, 1536,
             RenderLayer.MultiPhaseParameters.builder()
                     .program(RenderPhase.ENTITY_GLINT_PROGRAM)
@@ -57,7 +57,7 @@ public final class GoldenGlint {
                     .build(false));
 
     /** Copie de {@code RenderLayer.getDirectEntityGlint()}. */
-    public static final RenderLayer DIRECT_ENTITY = RenderLayer.of("shiny_depths_golden_glint_direct",
+    public static final RenderLayer DIRECT_ENTITY = RenderLayer.of("nowas_depths_golden_glint_direct",
             VertexFormats.POSITION_TEXTURE, VertexFormat.DrawMode.QUADS, 1536,
             RenderLayer.MultiPhaseParameters.builder()
                     .program(RenderPhase.DIRECT_ENTITY_GLINT_PROGRAM)
@@ -80,7 +80,7 @@ public final class GoldenGlint {
         if (!(provider instanceof VertexConsumerProvider.Immediate immediate)) {
             return;
         }
-        SequencedMap<RenderLayer, BufferAllocator> buffers = ((ImmediateAccessor) immediate).shinyDepths$layerBuffers();
+        SequencedMap<RenderLayer, BufferAllocator> buffers = ((ImmediateAccessor) immediate).nowasDepths$layerBuffers();
         if (buffers.containsKey(ITEM)) {
             return;
         }

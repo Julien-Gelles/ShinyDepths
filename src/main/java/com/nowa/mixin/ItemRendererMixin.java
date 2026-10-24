@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ItemRendererMixin {
     @Inject(method = "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformationMode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IILnet/minecraft/client/render/model/BakedModel;)V",
             at = @At("HEAD"))
-    private void shinyDepths$markPhilosophal(ItemStack stack, ModelTransformationMode mode, boolean leftHanded,
+    private void nowasDepths$markPhilosophal(ItemStack stack, ModelTransformationMode mode, boolean leftHanded,
                                              MatrixStack matrices, VertexConsumerProvider vertexConsumers,
                                              int light, int overlay, BakedModel model, CallbackInfo info) {
         GoldenGlint.begin(stack);
@@ -33,7 +33,7 @@ public class ItemRendererMixin {
 
     @Inject(method = "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformationMode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IILnet/minecraft/client/render/model/BakedModel;)V",
             at = @At("RETURN"))
-    private void shinyDepths$clearPhilosophal(ItemStack stack, ModelTransformationMode mode, boolean leftHanded,
+    private void nowasDepths$clearPhilosophal(ItemStack stack, ModelTransformationMode mode, boolean leftHanded,
                                               MatrixStack matrices, VertexConsumerProvider vertexConsumers,
                                               int light, int overlay, BakedModel model, CallbackInfo info) {
         GoldenGlint.end();
@@ -41,7 +41,7 @@ public class ItemRendererMixin {
 
     /** Chemin du rendu en trois dimensions : objet en main, posé au sol, dans un cadre. */
     @Inject(method = "getItemGlintConsumer", at = @At("HEAD"), cancellable = true)
-    private static void shinyDepths$goldenGlint(VertexConsumerProvider provider, RenderLayer layer, boolean solid,
+    private static void nowasDepths$goldenGlint(VertexConsumerProvider provider, RenderLayer layer, boolean solid,
                                                 boolean glint, CallbackInfoReturnable<VertexConsumer> info) {
         if (glint && GoldenGlint.isActive()) {
             GoldenGlint.ensureBuffers(provider);
@@ -52,7 +52,7 @@ public class ItemRendererMixin {
 
     /** Chemin du rendu à plat : c'est celui de l'inventaire, et il passe par une autre méthode. */
     @Inject(method = "getDirectItemGlintConsumer", at = @At("HEAD"), cancellable = true)
-    private static void shinyDepths$goldenDirectGlint(VertexConsumerProvider provider, RenderLayer layer, boolean solid,
+    private static void nowasDepths$goldenDirectGlint(VertexConsumerProvider provider, RenderLayer layer, boolean solid,
                                                       boolean glint, CallbackInfoReturnable<VertexConsumer> info) {
         if (glint && GoldenGlint.isActive()) {
             GoldenGlint.ensureBuffers(provider);

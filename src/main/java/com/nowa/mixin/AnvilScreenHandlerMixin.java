@@ -38,7 +38,7 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
     }
 
     @Inject(method = "updateResult", at = @At("TAIL"))
-    private void shinyDepths$polisherRules(CallbackInfo ci) {
+    private void nowasDepths$polisherRules(CallbackInfo ci) {
         ItemStack tool = this.input.getStack(0);
         if (!(tool.getItem() instanceof PolisherItem)) {
             return;

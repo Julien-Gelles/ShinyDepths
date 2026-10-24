@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nowas-depths:item/light_blue_stone_pouch",
+    "layer1": "nowas-depths:item/stone_pouch_gem"
+  }
+}

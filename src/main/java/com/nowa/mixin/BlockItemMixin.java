@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BlockItem.class)
 public class BlockItemMixin {
     @Inject(method = "postPlacement", at = @At("HEAD"))
-    private void shinyDepths$keepGemBlockPurity(BlockPos pos, World world, PlayerEntity player, ItemStack stack,
+    private void nowasDepths$keepGemBlockPurity(BlockPos pos, World world, PlayerEntity player, ItemStack stack,
                                                 BlockState state, CallbackInfoReturnable<Boolean> info) {
         if (!world.isClient() && GemBlockPurity.isGemBlock(state)) {
             GemBlockPurity.set(world, pos, stack.get(ModDataComponents.PURITY));

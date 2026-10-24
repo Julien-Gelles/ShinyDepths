@@ -34,7 +34,7 @@ public abstract class PlayerScreenHandlerMixin extends ScreenHandler {
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void shinyDepths$jewelrySlots(PlayerInventory inventory, boolean onServer, PlayerEntity owner,
+    private void nowasDepths$jewelrySlots(PlayerInventory inventory, boolean onServer, PlayerEntity owner,
                                           CallbackInfo info) {
         for (Worn place : Worn.values()) {
             addSlot(new JewelrySlot(owner, place, JewelryPanel.survivalX(place), JewelryPanel.survivalY(place)));
@@ -47,7 +47,7 @@ public abstract class PlayerScreenHandlerMixin extends ScreenHandler {
      * dernier recours est l'inventaire.
      */
     @Inject(method = "quickMove", at = @At("HEAD"), cancellable = true)
-    private void shinyDepths$wear(PlayerEntity player, int index, CallbackInfoReturnable<ItemStack> info) {
+    private void nowasDepths$wear(PlayerEntity player, int index, CallbackInfoReturnable<ItemStack> info) {
         if (index < PlayerScreenHandler.INVENTORY_START) {
             return;                                        // fabrication et armure : on n'y touche pas
         }
@@ -59,7 +59,7 @@ public abstract class PlayerScreenHandlerMixin extends ScreenHandler {
         if (ModJewelry.kindOf(moved.getItem()) == null) {
             return;                                        // ce n'est pas un bijou : au jeu de jouer
         }
-        int first = shinyDepths$firstJewelrySlot();
+        int first = nowasDepths$firstJewelrySlot();
         ItemStack before = moved.copy();
         if (first < 0 || !insertItem(moved, first, first + Worn.values().length, false)) {
             return;                                        // aucune place libre : le jeu s'en charge
@@ -74,7 +74,7 @@ public abstract class PlayerScreenHandlerMixin extends ScreenHandler {
     }
 
     /** Où commence notre colonne : cherchée plutôt que supposée, un autre mod pouvant ajouter des cases. */
-    private int shinyDepths$firstJewelrySlot() {
+    private int nowasDepths$firstJewelrySlot() {
         for (int index = 0; index < slots.size(); index++) {
             if (slots.get(index) instanceof JewelrySlot) {
                 return index;

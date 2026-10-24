@@ -30,7 +30,7 @@ import java.util.Optional;
 
 /**
  * Sachet à pierres (1 cuir, teignable) : 4 cases, qui n'acceptent que les pierres et minerais
- * (tag {@code shiny-depths:pouch_storable}). Il fonctionne comme le bundle :
+ * (tag {@code nowas-depths:pouch_storable}). Il fonctionne comme le bundle :
  * <ul>
  *   <li>dans l'inventaire, clic droit pour y ranger un objet ou en sortir le dernier rangé ;</li>
  *   <li>clic droit en main : il jette tout son contenu devant soi.</li>
@@ -386,7 +386,7 @@ public class StonePouchItem extends Item {
     public Text getName(ItemStack stack) {
         Item gem = singleGem(stack);
         return gem == null ? super.getName(stack)
-                : Text.translatable("item.shiny-depths.stone_pouch.of", new ItemStack(gem).getName());
+                : Text.translatable("item.nowas-depths.stone_pouch.of", new ItemStack(gem).getName());
     }
 
     @Override

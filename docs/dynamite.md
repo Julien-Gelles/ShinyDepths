@@ -1,4 +1,4 @@
-# Dynamite — Shiny Depths
+# Dynamite — Nowa's Depths
 
 Un bâton qu'on allume au briquet et qu'on lance. Deux fois moins fort que le bloc de TNT, mais il
 tient dans la main et part où l'on vise.
@@ -91,7 +91,7 @@ Une dynamite fait moins de dégâts que la TNT : on en use plusieurs au même en
 bâton exploserait sur ce que le premier vient de faire tomber. Son explosion **ne détruit donc pas
 les pierres et les minerais tombés au sol** : tout ce qu'un sachet à pierres accepte (pierres brutes
 et polies, minerais, lingots, pépites, poudres…), plus les géodes et les sachets eux-mêmes. C'est le
-tag `#shiny-depths:dynamite_proof`, qu'un datapack peut étendre.
+tag `#nowas-depths:dynamite_proof`, qu'un datapack peut étendre.
 
 Seule la dynamite les épargne : la TNT, un creeper ou toute autre explosion les détruisent comme
 avant. Et les autres objets au sol — outils, blocs, nourriture — restent détruits par la dynamite.
@@ -103,7 +103,7 @@ Comme une boule de neige, mais plus lourd : elle part moins vite (1,1 contre 1,5
 
 ## Réglages
 
-Tout est sous `dynamite` dans `config/shiny-depths.json`.
+Tout est sous `dynamite` dans `config/nowas-depths.json`.
 
 | Clé | Défaut | Ce qu'elle fait |
 |---|---|---|
@@ -132,7 +132,7 @@ Si la mèche change de longueur, `Dynamite.FUSE_STAGES` doit suivre.
 ## Côté technique
 
 - La mèche n'est pas un compte à rebours : la pile porte **l'instant où le bâton allumé explosera**
-  (composant `shiny-depths:fuse`), et retient si ce bâton est encore compté dans son nombre. Rien ne change sur l'objet de tic en tic, il ne tressaute donc pas
+  (composant `nowas-depths:fuse`), et retient si ce bâton est encore compté dans son nombre. Rien ne change sur l'objet de tic en tic, il ne tressaute donc pas
   dans la main, et la même donnée sert au bâton tenu, au bâton lancé et à l'animation.
 - `DynamiteEntity` porte l'objet lancé, mèche comprise : c'est lui que `DynamiteEntityRenderer`
   dessine en vol, en le faisant tournoyer.

@@ -23,7 +23,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.Optional;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -52,7 +52,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     /**
      * Deux modèles par sachet : le sachet nu, et le même avec sa pastille. Une propriété du modèle
-     * bascule de l'un à l'autre, {@code shiny-depths:gem}, que le client met à 1 quand le sachet ne
+     * bascule de l'un à l'autre, {@code nowas-depths:gem}, que le client met à 1 quand le sachet ne
      * contient qu'une sorte de pierre.
      */
     private static void registerPouch(ItemModelGenerator generator, Item pouch) {
@@ -76,7 +76,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     /**
      * Deux modeles par bijou : le bijou nu, et le meme avec sa pierre. La propriete
-     * {@code shiny-depths:gem} bascule de l'un a l'autre des qu'un logement est occupe, et la
+     * {@code nowas-depths:gem} bascule de l'un a l'autre des qu'un logement est occupe, et la
      * couleur de la pierre vient teinter la deuxieme couche — c'est exactement le tour du sachet.
      */
     private static void registerJewel(ItemModelGenerator generator, Item jewel, ModJewelry.Kind kind) {

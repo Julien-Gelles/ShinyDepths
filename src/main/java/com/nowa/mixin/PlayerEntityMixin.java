@@ -24,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
     @Inject(method = "getBlockBreakingSpeed", at = @At("RETURN"), cancellable = true)
-    private void shinyDepths$quarrying(BlockState state, CallbackInfoReturnable<Float> info) {
+    private void nowasDepths$quarrying(BlockState state, CallbackInfoReturnable<Float> info) {
         if (!state.isIn(ModBlockTags.ORES)) {
             return;
         }
@@ -36,17 +36,17 @@ public class PlayerEntityMixin {
 
     /** Les pouvoirs : leur tic, et ce qu'ils changent à la faim et à l'expérience gagnée. */
     @Inject(method = "tick", at = @At("TAIL"))
-    private void shinyDepths$powerTick(CallbackInfo info) {
+    private void nowasDepths$powerTick(CallbackInfo info) {
         PowerHooks.tick((PlayerEntity) (Object) this);
     }
 
     @ModifyVariable(method = "addExhaustion", at = @At("HEAD"), argsOnly = true)
-    private float shinyDepths$powerExhaustion(float exhaustion) {
+    private float nowasDepths$powerExhaustion(float exhaustion) {
         return PowerHooks.exhaustion((PlayerEntity) (Object) this, exhaustion);
     }
 
     @ModifyVariable(method = "addExperience", at = @At("HEAD"), argsOnly = true)
-    private int shinyDepths$powerExperience(int experience) {
+    private int nowasDepths$powerExperience(int experience) {
         return PowerHooks.experience((PlayerEntity) (Object) this, experience);
     }
 
@@ -55,7 +55,7 @@ public class PlayerEntityMixin {
      * donc a la meme regle de monde, et une partie en « keepInventory » garde ses bagues.
      */
     @Inject(method = "dropInventory", at = @At("TAIL"))
-    private void shinyDepths$dropJewelry(CallbackInfo info) {
+    private void nowasDepths$dropJewelry(CallbackInfo info) {
         Jewelry.dropAll((PlayerEntity) (Object) this);
     }
 }

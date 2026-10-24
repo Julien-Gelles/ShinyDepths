@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "nowas-depths:polisher"
+    },
+    {
+      "item": "nowas-depths:cobalt_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nowas-depths:cobalt_polisher"
+  }
+}

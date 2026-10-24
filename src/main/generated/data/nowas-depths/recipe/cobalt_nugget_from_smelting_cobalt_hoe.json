@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "cobalt_nugget",
+  "ingredient": {
+    "item": "nowas-depths:cobalt_hoe"
+  },
+  "result": {
+    "id": "nowas-depths:cobalt_nugget"
+  }
+}

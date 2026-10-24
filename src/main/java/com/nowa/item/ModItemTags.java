@@ -5,7 +5,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 public class ModItemTags {
     /** Ce qu'un sachet à pierres accepte : pierres, minerais, lingots, pépites, poudres… (défini par le datagen). */

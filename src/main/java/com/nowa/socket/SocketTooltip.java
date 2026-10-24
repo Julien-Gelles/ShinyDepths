@@ -24,7 +24,7 @@ public final class SocketTooltip {
         ItemTooltipCallback.EVENT.register((stack, context, type, lines) -> {
             ModJewelry.Metal metal = ModJewelry.metalOf(stack.getItem());
             if (metal != null && metal.armor() > 0) {
-                lines.add(Text.translatable("tooltip.shiny-depths.jewelry.armor", number(metal.armor()))
+                lines.add(Text.translatable("tooltip.nowas-depths.jewelry.armor", number(metal.armor()))
                         .formatted(Formatting.BLUE));
             }
             int capacity = Socketing.capacity(stack);
@@ -32,14 +32,14 @@ public final class SocketTooltip {
                 return;
             }
             Sockets sockets = Socketing.get(stack);
-            lines.add(Text.translatable("tooltip.shiny-depths.sockets", sockets.size(), capacity)
+            lines.add(Text.translatable("tooltip.nowas-depths.sockets", sockets.size(), capacity)
                     .formatted(Formatting.GRAY));
             boolean hasMain = Socketing.hasMain(stack);
             // la bague dit ce qu'elle donne : son pouvoir, au niveau de la pureté de sa pierre
             Powers.Active ring = Powers.ofRing(stack);
             if (ring.power() != null) {
                 int rgb = GemColors.of(ring.power().gem()) & 0xFFFFFF;
-                lines.add(Text.translatable("tooltip.shiny-depths.ring.power", ring.power().displayName(),
+                lines.add(Text.translatable("tooltip.nowas-depths.ring.power", ring.power().displayName(),
                         Text.translatable("enchantment.level." + ring.level())).styled(style -> style.withColor(rgb)));
             }
             for (int cell = 0; cell < capacity; cell++) {
@@ -62,7 +62,7 @@ public final class SocketTooltip {
     private static Text named(ItemStack gem) {
         Purity purity = gem.get(ModDataComponents.PURITY);
         return purity == null ? gem.getName()
-                : Text.translatable("tooltip.shiny-depths.socket_gem", gem.getName(), purity.displayName());
+                : Text.translatable("tooltip.nowas-depths.socket_gem", gem.getName(), purity.displayName());
     }
 
     /** 0,25 s'écrit 0.25, et 1 s'écrit 1. */

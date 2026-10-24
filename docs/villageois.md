@@ -1,4 +1,4 @@
-# Villageois lapidaire — Shiny Depths
+# Villageois lapidaire — Nowa's Depths
 
 Un nouveau métier de villageois. Le lapidaire vend des pierres polies contre des émeraudes — des
 plus médiocres aux plus belles à mesure qu'il monte en niveau — et rachète celles du joueur.
@@ -201,7 +201,7 @@ coffres).
 
 ## Réglages
 
-Sous `villager.lapidary` dans `config/shiny-depths.json`. Les changer rééquilibre tous les échanges
+Sous `villager.lapidary` dans `config/nowas-depths.json`. Les changer rééquilibre tous les échanges
 d'un coup ; les villageois déjà formés gardent les leurs.
 
 | Clé | Défaut | Ce qu'elle fait |

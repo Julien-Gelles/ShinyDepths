@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin {
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
-    private void shinyDepths$burningDynamite(CallbackInfo info) {
+    private void nowasDepths$burningDynamite(CallbackInfo info) {
         ItemEntity item = (ItemEntity) (Object) this;
         if (item.getWorld().isClient() || !Dynamite.isDue(item.getStack(), item.getWorld())) {
             return;
@@ -35,7 +35,7 @@ public class ItemEntityMixin {
 
     /** Les pierres et les minerais tombés au sol ne craignent pas la dynamite (voir {@link Dynamite#spares}). */
     @Inject(method = "damage", at = @At("HEAD"), cancellable = true)
-    private void shinyDepths$dynamiteProof(DamageSource source, float amount, CallbackInfoReturnable<Boolean> info) {
+    private void nowasDepths$dynamiteProof(DamageSource source, float amount, CallbackInfoReturnable<Boolean> info) {
         if (Dynamite.spares(((ItemEntity) (Object) this).getStack())) {
             info.setReturnValue(false);
         }

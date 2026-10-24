@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ProjectileEntity.class)
 public class ProjectileEntityMixin {
     @Inject(method = "hitOrDeflect", at = @At("HEAD"), cancellable = true)
-    private void shinyDepths$reflect(HitResult hit, CallbackInfoReturnable<ProjectileDeflection> info) {
+    private void nowasDepths$reflect(HitResult hit, CallbackInfoReturnable<ProjectileDeflection> info) {
         if (hit instanceof EntityHitResult entityHit) {
             ProjectileDeflection reflected = Reflect.tryReflect((ProjectileEntity) (Object) this, entityHit.getEntity());
             if (reflected != null) {

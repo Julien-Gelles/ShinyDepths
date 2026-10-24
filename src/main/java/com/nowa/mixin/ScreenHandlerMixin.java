@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ScreenHandler.class)
 public class ScreenHandlerMixin {
     @Inject(method = "onClosed", at = @At("HEAD"))
-    private void shinyDepths$crafterClosed(PlayerEntity player, CallbackInfo info) {
+    private void nowasDepths$crafterClosed(PlayerEntity player, CallbackInfo info) {
         if ((Object) this instanceof CrafterScreenHandler crafter && player instanceof ServerPlayerEntity served
                 && crafter.getInputInventory() instanceof CrafterBlockEntity block) {
             LapidaryCrafting.closed(served, block);

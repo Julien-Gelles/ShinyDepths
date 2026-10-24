@@ -2,7 +2,7 @@ package com.nowa.jewelry;
 
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Où se tient la case de la bague, dans les deux écrans d'inventaire du joueur.

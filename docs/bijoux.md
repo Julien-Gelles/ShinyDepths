@@ -1,4 +1,4 @@
-# Bijoux — Shiny Depths
+# Bijoux — Nowa's Depths
 
 **Depuis la refonte du 2026-10-14, il n'y a plus qu'un bijou : la bague.** Elle se porte dans un
 emplacement à elle, au-dessus de la seconde main, et porte **une seule pierre**. Depuis le
@@ -174,14 +174,14 @@ régénèrent plus par script.
 
 ### Ce que l'ancien système laisse derrière lui
 
-- La marque de sang des armes du Vampire (`shiny-depths:blood`) a été retirée le 2026-10-17, une fois
+- La marque de sang des armes du Vampire (`nowas-depths:blood`) a été retirée le 2026-10-17, une fois
   tout essayé : une arme qui la porterait encore dans une vieille sauvegarde ne se chargerait plus.
 - Les flammes posées par le set Feu, le venin, les cœurs scellés, les effets des anciens sets
   disparaissent au chargement, sans dommage.
 
 ## Réglages
 
-Tout est sous `jewelry` dans `config/shiny-depths.json`.
+Tout est sous `jewelry` dans `config/nowas-depths.json`.
 
 | Clé | Défaut | Ce qu'elle fait |
 |---|---|---|

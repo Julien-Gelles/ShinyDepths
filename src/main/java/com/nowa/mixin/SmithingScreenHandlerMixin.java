@@ -28,7 +28,7 @@ public abstract class SmithingScreenHandlerMixin extends ForgingScreenHandler {
     }
 
     @Inject(method = "updateResult", at = @At("RETURN"))
-    private void shinyDepths$lapidaryLevel(CallbackInfo info) {
+    private void nowasDepths$lapidaryLevel(CallbackInfo info) {
         ItemStack crafted = this.output.getStack(0);
         if (crafted.isEmpty() || LapidaryCrafting.canCraft(this.player, crafted)) {
             return;

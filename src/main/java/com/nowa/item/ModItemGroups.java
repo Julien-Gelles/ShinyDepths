@@ -10,8 +10,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static com.nowa.ShinyDepths.LOGGER;
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.LOGGER;
+import static com.nowa.NowasDepths.MOD_ID;
 
 public class ModItemGroups {
     /**
@@ -20,7 +20,7 @@ public class ModItemGroups {
      */
     public static final ItemGroup LAPIDARY = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MOD_ID, "lapidary"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.shiny-depths.lapidary"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.nowas-depths.lapidary"))
                     .icon(() -> new ItemStack(ModItems.POLISHER)).entries((displayContext, entries) -> {
                         entries.add(ModItems.POLISHER);
                         entries.add(ModItems.PYRITE_POLISHER);
@@ -90,7 +90,7 @@ public class ModItemGroups {
      */
     public static final ItemGroup MINER = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MOD_ID, "miner"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.shiny-depths.miner"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.nowas-depths.miner"))
                     .icon(() -> new ItemStack(com.nowa.headlamp.Headlamp.HEADLAMP)).entries((displayContext, entries) -> {
                         entries.add(com.nowa.headlamp.Headlamp.HEADLAMP);
                         entries.add(com.nowa.dynamite.Dynamite.ITEM);

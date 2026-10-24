@@ -26,7 +26,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(CraftingScreenHandler.class)
 public class CraftingScreenHandlerMixin {
     @Inject(method = "updateResult", at = @At("RETURN"))
-    private static void shinyDepths$lapidaryLevel(ScreenHandler handler, World world, PlayerEntity player,
+    private static void nowasDepths$lapidaryLevel(ScreenHandler handler, World world, PlayerEntity player,
                                                   RecipeInputInventory input, CraftingResultInventory result,
                                                   RecipeEntry<CraftingRecipe> recipe, CallbackInfo info) {
         ItemStack crafted = result.getStack(0);

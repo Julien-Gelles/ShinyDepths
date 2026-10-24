@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "shiny-depths",
+	"id": "nowas-depths",
 	"version": "${version}",
-	"name": "Shiny Depths",
+	"name": "Nowa's Depths",
 	"description": "",
 	"authors": [
 		"Me!"
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/shiny-depths/icon.png",
+	"icon": "assets/nowas-depths/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.nowa.ShinyDepths"
+			"com.nowa.NowasDepths"
 		],
 		"client": [
-			"com.nowa.ShinyDepthsClient"
+			"com.nowa.NowasDepthsClient"
 		],
 		"fabric-datagen": [
-			"com.nowa.ShinyDepthsDataGenerator"
+			"com.nowa.NowasDepthsDataGenerator"
 		]
 	},
 	"mixins": [
-		"shiny-depths.mixins.json"
+		"nowas-depths.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",

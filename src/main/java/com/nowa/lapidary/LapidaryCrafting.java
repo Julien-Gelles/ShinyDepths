@@ -25,7 +25,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Ce qu'un lapidaire doit savoir avant de forger ses propres outils. Depuis le 2026-10-18, chaque
@@ -113,7 +113,7 @@ public final class LapidaryCrafting {
         for (ServerPlayerEntity other : player.getServer().getPlayerManager().getPlayerList()) {
             if (other != player && other.currentScreenHandler instanceof CrafterScreenHandler screen
                     && screen.getInputInventory() == block && screen instanceof CrafterPreview preview) {
-                preview.shinyDepths$refreshPreview();
+                preview.nowasDepths$refreshPreview();
             }
         }
     }
@@ -166,8 +166,8 @@ public final class LapidaryCrafting {
             return;
         }
         ModMessages.send(player, new ModMessages.Message("craft_level",
-                Text.translatable("lapidary.shiny-depths.craft.locked", result.getName()),
-                Text.translatable("lapidary.shiny-depths.craft.locked.detail", Text.translatable(node.translationKey())),
+                Text.translatable("lapidary.nowas-depths.craft.locked", result.getName()),
+                Text.translatable("lapidary.nowas-depths.craft.locked.detail", Text.translatable(node.translationKey())),
                 new ItemStack(ModItems.POLISHER)));
     }
 }

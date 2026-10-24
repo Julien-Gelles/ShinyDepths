@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "pyrite_nugget",
+  "ingredients": [
+    {
+      "item": "nowas-depths:pyrite_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "nowas-depths:pyrite_nugget"
+  }
+}

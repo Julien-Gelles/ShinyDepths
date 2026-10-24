@@ -62,10 +62,10 @@ final class LapidaryCommand {
     private static int info(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         LapidaryData data = Lapidary.get(context.getSource().getPlayerOrThrow());
         int level = data.level();
-        Text progress = Text.translatable("lapidary.shiny-depths.screen.xp",
+        Text progress = Text.translatable("lapidary.nowas-depths.screen.xp",
                 LapidaryLevels.progressInLevel(data.xp()), LapidaryLevels.xpToNext(level));
-        context.getSource().sendFeedback(() -> Text.translatable("lapidary.shiny-depths.command.info",
-                level, progress, Lapidary.count("lapidary.shiny-depths.points", data.availablePoints())), false);
+        context.getSource().sendFeedback(() -> Text.translatable("lapidary.nowas-depths.command.info",
+                level, progress, Lapidary.count("lapidary.nowas-depths.points", data.availablePoints())), false);
         return level;
     }
 
@@ -83,8 +83,8 @@ final class LapidaryCommand {
 
     private static int feedback(CommandContext<ServerCommandSource> context, String key, int value) throws CommandSyntaxException {
         int count = targets(context).size();
-        context.getSource().sendFeedback(() -> Text.translatable("lapidary.shiny-depths.command." + key, value,
-                Lapidary.count("lapidary.shiny-depths.players", count)), true);
+        context.getSource().sendFeedback(() -> Text.translatable("lapidary.nowas-depths.command." + key, value,
+                Lapidary.count("lapidary.nowas-depths.players", count)), true);
         return count;
     }
 }

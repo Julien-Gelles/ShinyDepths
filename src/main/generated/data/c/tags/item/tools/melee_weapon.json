@@ -1,12 +1,12 @@
 {
   "values": [
-    "shiny-depths:pyrite_sword",
-    "shiny-depths:pyrite_axe",
-    "shiny-depths:cobalt_sword",
-    "shiny-depths:cobalt_axe",
-    "shiny-depths:titanium_sword",
-    "shiny-depths:titanium_axe",
-    "shiny-depths:platinum_sword",
-    "shiny-depths:platinum_axe"
+    "nowas-depths:pyrite_sword",
+    "nowas-depths:pyrite_axe",
+    "nowas-depths:cobalt_sword",
+    "nowas-depths:cobalt_axe",
+    "nowas-depths:titanium_sword",
+    "nowas-depths:titanium_axe",
+    "nowas-depths:platinum_sword",
+    "nowas-depths:platinum_axe"
   ]
 }

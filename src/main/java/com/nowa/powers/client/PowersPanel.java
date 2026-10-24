@@ -19,7 +19,7 @@ import net.minecraft.util.Identifier;
 import java.util.Collection;
 import java.util.List;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Le pouvoir du joueur, dans la fenêtre d'inventaire : la pierre de sa bague, dans le coin, et à son
@@ -63,7 +63,7 @@ public final class PowersPanel {
         int rgb = GemColors.of(active.power().gem()) & 0xFFFFFF;
         context.drawTooltip(text, List.of(
                 active.power().displayName().copy().styled(style -> style.withColor(rgb)),
-                Text.translatable("tooltip.shiny-depths.power.level", Text.translatable("enchantment.level." + active.level()))
+                Text.translatable("tooltip.nowas-depths.power.level", Text.translatable("enchantment.level." + active.level()))
                         .formatted(Formatting.GRAY)), mouseX, mouseY);
     }
 

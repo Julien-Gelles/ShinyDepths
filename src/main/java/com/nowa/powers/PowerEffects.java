@@ -22,7 +22,7 @@ import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.nowa.ShinyDepths.MOD_ID;
+import static com.nowa.NowasDepths.MOD_ID;
 
 /**
  * Les pouvoirs, montrés comme le jeu montre ses effets : une icône en haut à droite de l'écran, une

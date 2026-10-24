@@ -1,6 +1,6 @@
-# Réglages — Shiny Depths
+# Réglages — Nowa's Depths
 
-Tout ce que le mod chiffre se règle dans **`config/shiny-depths.json`**, créé au premier démarrage.
+Tout ce que le mod chiffre se règle dans **`config/nowas-depths.json`**, créé au premier démarrage.
 Quatre cents valeurs, de la durabilité d'un casque en particulier aux chances de pureté rang par
 rang.
 
@@ -22,7 +22,7 @@ Pour repartir de zéro : supprimer le fichier.
 
 ## Ce qui se recharge, et ce qui ne se recharge pas
 
-`/shinydepths config reload` (opérateur) relit le fichier en cours de partie.
+`/nowasdepths config reload` (opérateur) relit le fichier en cours de partie.
 
 Se rechargent aussitôt : les chances de pureté, les bonus de l'arbre, les niveaux exigés, les
 effets des pierres serties, le dessertissage, les géodes, le polissoir, les tables, la récupération
@@ -60,7 +60,7 @@ prend effet au chargement du monde suivant.
 
 **Les autres nombres de la génération** — taille des veines, plage de hauteur, densité, annulation
 à l'air — ne sont pas encore réglables. Ils vivent dans les fichiers de données du mod
-(`data/shiny-depths/worldgen/`), écrits une fois pour toutes à la compilation : les lire dans le
+(`data/nowas-depths/worldgen/`), écrits une fois pour toutes à la compilation : les lire dans le
 fichier de réglages suppose de construire les features au chargement du monde plutôt que de les
 livrer toutes faites. C'est un changement de structure à part entière, et il est à faire.
 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_pyrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nowas-depths:raw_pyrite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nowas-depths:pyrite_ingot_from_blasting_raw_pyrite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_pyrite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nowas-depths:pyrite_ingot_from_blasting_raw_pyrite"
+    ]
+  }
+}
